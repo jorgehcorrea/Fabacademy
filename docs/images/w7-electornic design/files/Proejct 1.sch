@@ -1,0 +1,402 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:fab
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L +5V #PWR01
+U 1 1 5C7566CF
+P 3650 2400
+F 0 "#PWR01" H 3650 2250 50  0001 C CNN
+F 1 "+5V" H 3650 2540 50  0000 C CNN
+F 2 "" H 3650 2400 50  0000 C CNN
+F 3 "" H 3650 2400 50  0000 C CNN
+	1    3650 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L -5V #PWR1
+U 1 1 5C7566FD
+P 3450 3775
+F 0 "#PWR1" H 3450 3875 50  0001 C CNN
+F 1 "-5V" H 3450 3925 50  0000 C CNN
+F 2 "" H 3450 3775 50  0000 C CNN
+F 3 "" H 3450 3775 50  0000 C CNN
+	1    3450 3775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 6MM_SWITCH6MM_SWITCH S1
+U 1 1 5C756CCE
+P 6950 1700
+F 0 "S1" V 6665 1600 45  0000 C CNN
+F 1 "button" V 6765 1825 45  0000 L BNN
+F 2 "fab_6MM_SWITCH" H 6980 1850 20  0001 C CNN
+F 3 "" H 6950 1700 60  0001 C CNN
+	1    6950 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L AVRISPSMD U2
+U 1 1 5C7570C5
+P 2750 1800
+F 0 "U2" H 2500 2025 45  0000 L BNN
+F 1 "AVRISPSMD" H 2500 1500 45  0000 L BNN
+F 2 "fab_2X03SMD" H 2780 1950 20  0001 C CNN
+F 3 "" H 2750 1800 60  0001 C CNN
+	1    2750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATTINY441-SSU IC1
+U 1 1 5C7572FD
+P 4900 3000
+F 0 "IC1" H 4050 3750 50  0000 C CNN
+F 1 "ATTINY441-SSU" H 5600 2250 50  0000 C CNN
+F 2 "SO14" H 4900 2800 50  0000 C CIN
+F 3 "" H 4900 3000 50  0000 C CNN
+	1    4900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR02
+U 1 1 5C757FFA
+P 4050 1100
+F 0 "#PWR02" H 4050 950 50  0001 C CNN
+F 1 "+5V" H 4050 1240 50  0000 C CNN
+F 2 "" H 4050 1100 50  0000 C CNN
+F 3 "" H 4050 1100 50  0000 C CNN
+	1    4050 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RES-US1206FAB R1
+U 1 1 5C75803B
+P 5250 1200
+F 0 "R1" H 5100 1259 45  0000 L BNN
+F 1 "499" H 5100 1070 45  0000 L BNN
+F 2 "fab_R1206FAB" H 5280 1350 20  0001 C CNN
+F 3 "" H 5250 1200 60  0001 C CNN
+	1    5250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L -5V #PWR5
+U 1 1 5C7580F0
+P 4450 1800
+F 0 "#PWR5" H 4450 1900 50  0001 C CNN
+F 1 "-5V" H 4450 1950 50  0000 C CNN
+F 2 "" H 4450 1800 50  0000 C CNN
+F 3 "" H 4450 1800 50  0000 C CNN
+	1    4450 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L FTDI-SMD-HEADER M1
+U 1 1 5C7581CE
+P 1925 2975
+F 0 "M1" H 1925 2975 45  0001 C CNN
+F 1 "FTDI-SMD-HEADER" H 1925 2975 45  0001 C CNN
+F 2 "fab_1X06SMD" H 1955 3125 20  0001 C CNN
+F 3 "" H 1925 2975 60  0001 C CNN
+	1    1925 2975
+	-1   0    0    1   
+$EndComp
+Text Label 3500 1625 0    60   ~ 0
++5v
+Text Label 3450 1825 0    60   ~ 0
+MOSI
+$Comp
+L CAP-UNPOLARIZED C1
+U 1 1 5C758400
+P 4050 1400
+F 0 "C1" H 3900 1500 45  0000 L BNN
+F 1 "1uf" H 3900 1250 45  0000 L BNN
+F 2 "fab_C1206" H 4080 1550 20  0001 C CNN
+F 3 "" H 4050 1400 60  0001 C CNN
+	1    4050 1400
+	0    1    -1   0   
+$EndComp
+$Comp
+L -5V #PWR4
+U 1 1 5C7585B2
+P 4050 1750
+F 0 "#PWR4" H 4050 1850 50  0001 C CNN
+F 1 "-5V" H 4050 1900 50  0000 C CNN
+F 2 "" H 4050 1750 50  0000 C CNN
+F 3 "" H 4050 1750 50  0000 C CNN
+	1    4050 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D1
+U 1 1 5C75860C
+P 4450 1500
+F 0 "D1" H 4450 1600 50  0000 C CNN
+F 1 "Red" H 4450 1400 50  0000 C CNN
+F 2 "" H 4450 1500 50  0001 C CNN
+F 3 "" H 4450 1500 50  0000 C CNN
+	1    4450 1500
+	0    -1   -1   0   
+$EndComp
+Text Label 5900 1200 0    60   ~ 0
+led
+$Comp
+L RES-US1206FAB R3
+U 1 1 5C7589C3
+P 6450 1200
+F 0 "R3" H 6300 1259 45  0000 L BNN
+F 1 "10k" H 6300 1070 45  0000 L BNN
+F 2 "fab_R1206FAB" H 6480 1350 20  0001 C CNN
+F 3 "" H 6450 1200 60  0001 C CNN
+	1    6450 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L -5V #PWR8
+U 1 1 5C758AE0
+P 7300 2050
+F 0 "#PWR8" H 7300 2150 50  0001 C CNN
+F 1 "-5V" H 7300 2200 50  0000 C CNN
+F 2 "" H 7300 2050 50  0000 C CNN
+F 3 "" H 7300 2050 50  0000 C CNN
+	1    7300 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR03
+U 1 1 5C758D1D
+P 6200 1800
+F 0 "#PWR03" H 6200 1650 50  0001 C CNN
+F 1 "+5V" H 6200 1940 50  0000 C CNN
+F 2 "" H 6200 1800 50  0000 C CNN
+F 3 "" H 6200 1800 50  0000 C CNN
+	1    6200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR04
+U 1 1 5C758DF3
+P 6450 1000
+F 0 "#PWR04" H 6450 850 50  0001 C CNN
+F 1 "+5V" H 6450 1140 50  0000 C CNN
+F 2 "" H 6450 1000 50  0000 C CNN
+F 3 "" H 6450 1000 50  0000 C CNN
+	1    6450 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L RES-US1206FAB R2
+U 1 1 5C758E9F
+P 6200 2100
+F 0 "R2" H 6050 2159 45  0000 L BNN
+F 1 "10k" H 6050 1970 45  0000 L BNN
+F 2 "fab_R1206FAB" H 6230 2250 20  0001 C CNN
+F 3 "" H 6200 2100 60  0001 C CNN
+	1    6200 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Resonator Y1
+U 1 1 5C758F8C
+P 6750 2850
+F 0 "Y1" H 6750 3075 50  0000 C CNN
+F 1 "Resonator" H 6750 3000 50  0000 C CNN
+F 2 "" H 6725 2850 50  0001 C CNN
+F 3 "" H 6725 2850 50  0000 C CNN
+	1    6750 2850
+	1    0    0    -1  
+$EndComp
+Text Label 6750 3750 0    60   ~ 0
+-5v
+Text Label 6250 3100 0    60   ~ 0
+led
+Text Label 6400 2050 0    60   ~ 0
+tx
+Text Label 6400 2350 0    60   ~ 0
+rx
+Text Label 6400 2500 0    60   ~ 0
+button
+Text Label 6250 2800 0    60   ~ 0
+sck
+Text Label 6250 2900 0    60   ~ 0
+MISO
+Text Label 6250 3000 0    60   ~ 0
+MOSI
+Text Label 3500 1975 0    60   ~ 0
+-5v
+Text Label 1525 2025 0    60   ~ 0
+rst
+Text Label 1525 1825 0    60   ~ 0
+sck
+Text Label 1475 1625 0    60   ~ 0
+MISO
+Text Label 2175 3500 0    60   ~ 0
+rts
+Text Label 2275 3300 0    60   ~ 0
+rx
+Text Label 2575 3100 0    60   ~ 0
+tx
+Text Label 2275 3000 0    60   ~ 0
++5v
+Text Label 2575 2800 0    60   ~ 0
+cts
+Text Label 2075 2600 0    60   ~ 0
+-5v
+Wire Wire Line
+	3850 2400 3650 2400
+Wire Wire Line
+	3850 3450 3650 3450
+Wire Wire Line
+	2950 1700 3300 1700
+Wire Wire Line
+	3400 1725 3500 1625
+Wire Wire Line
+	2950 1800 3350 1800
+Wire Wire Line
+	4050 1100 4050 1300
+Wire Wire Line
+	4450 1650 4450 1800
+Wire Wire Line
+	5450 1200 5900 1200
+Wire Wire Line
+	5050 1200 4450 1200
+Wire Wire Line
+	4450 1200 4450 1350
+Wire Wire Line
+	6450 1400 6450 1700
+Wire Wire Line
+	6450 1700 6750 1700
+Wire Wire Line
+	7150 1700 7300 1700
+Wire Wire Line
+	7300 1700 7300 2050
+Wire Wire Line
+	6200 1800 6200 1900
+Wire Wire Line
+	5950 3400 7150 3400
+Wire Wire Line
+	7150 3400 7150 2850
+Wire Wire Line
+	7150 2850 6900 2850
+Wire Wire Line
+	6600 2850 6500 2850
+Wire Wire Line
+	6500 2850 6500 3300
+Wire Wire Line
+	6500 3300 5950 3300
+Wire Wire Line
+	6750 3050 6750 3750
+Wire Wire Line
+	6200 2300 6200 3600
+Wire Wire Line
+	6200 3600 5950 3600
+Wire Wire Line
+	5950 3100 6250 3100
+Wire Wire Line
+	5950 3000 6250 3000
+Wire Wire Line
+	5950 2900 6250 2900
+Wire Wire Line
+	5950 2800 6250 2800
+Wire Wire Line
+	5950 2500 6100 2500
+Wire Wire Line
+	6100 2500 6400 2250
+Wire Wire Line
+	5950 2400 6400 2100
+Wire Wire Line
+	2950 1900 3300 1900
+Wire Wire Line
+	3400 1925 3500 1975
+Wire Wire Line
+	1875 1825 1525 1825
+Wire Wire Line
+	1875 1725 1625 1725
+Wire Wire Line
+	1625 1725 1475 1625
+Wire Wire Line
+	6400 2100 6400 2050
+Wire Wire Line
+	6400 2250 6400 2350
+Wire Wire Line
+	3850 3450 3850 3600
+Wire Wire Line
+	3650 3450 3650 3600
+Wire Wire Line
+	6400 2500 5950 2700
+Wire Wire Line
+	4050 1600 4050 1750
+Wire Wire Line
+	1875 1925 1425 1925
+Wire Wire Line
+	1425 1925 1425 2025
+Wire Wire Line
+	1425 2025 1525 2025
+Wire Wire Line
+	2075 2600 1925 2975
+Wire Wire Line
+	2575 2800 1925 3075
+Wire Wire Line
+	1925 3175 2275 3000
+Wire Wire Line
+	1925 3275 2575 3100
+Wire Wire Line
+	2275 3300 1925 3375
+Wire Wire Line
+	2175 3500 1925 3475
+Wire Wire Line
+	2650 1700 1875 1725
+Wire Wire Line
+	1875 1825 2650 1800
+Wire Wire Line
+	2650 1900 1875 1925
+Wire Wire Line
+	3300 1700 3400 1725
+Wire Wire Line
+	3350 1800 3450 1825
+Wire Wire Line
+	3300 1900 3400 1925
+Wire Wire Line
+	3650 3600 3450 3775
+$EndSCHEMATC

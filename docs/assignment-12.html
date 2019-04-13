@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Output Devices</h1>
+									</header>
+									
+								<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>individual assignment:	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>add an output device to a microcontroller board you've designed, and program it to do something &#9744;</li>
+																</ul>
+																
+															<li><strong>group assignment:	&#9744;</strong></li>
+																<ul>
+																	<li>measure the power consumption of an output device &#9744;</li>
+																
+																</ul>
+															
+															
+																
+															<li><strong>To Conclude & Reflect</strong></li>
+															
+														</ul>
+														
+											</div>
+						<hr class="major" />
+									<h3>individual assignment</h3>
+							<div class="row">
+							 
+								<div class="col-6 col-12-medium" style="align: center;">
+									<span class="image main"><img  src="images/w12-output/ia/w12-ia-0.jpg" alt="" style="image-orientation: from-image;" /></span>
+								</div>	
+								
+								<div class="col-12 col-12-medium">
+									<p>In this section I did a microcontroller to actuate a relay. The final goal being turn on a coffee maker. I measured the output device's in the group assignment, to determine the relay specifications. 7.3 ampers  and 120v.  </p>
+									<p>As you will see, above is the finished pcb already turning on the device.  </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-1.jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-2.jpg" alt="" /></span>
+								</div>
+								<div class="col-12 col-12-medium">
+								<p>In the beguining I actually created a pcb, without a bluetooth in order to activate the relay via input plugs. I had extra time and thought maybe Ill make an aditional leap and create a pcb with a bluetooth integrated and get ahead on the final project. I did get some know-how from suhail-p. </p>
+								</div>
+								<div class="col-12">
+									<ul class="actions fit">
+										<li><a href="imagesimages/w12-output/ia/w12-Output Device-jorge correa.zip" class="button primary fit" download> Compressed files corrected. Relay output pcb with out bluetooth. </a></li>		
+									</ul>
+								</div>
+								<div class="col-12">
+								<h4>The pcb with a bluetooth:</h4>
+								</div>
+								<div class="col-8 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-3.jpg" alt="" /></span>
+								</div>
+								
+								<p>This was the second itteration. In this case the bluetooth module DN-4971 on the top left corner is integrated. </p>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-4.jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-5.jpg" alt="" /></span>
+								</div>
+								<p>Inserting the png files into mods. In this case the parameters changed slightly, and documenting it will help me next week for sure. </p>
+								<p>At the same time I did this experiment I thought was neat and safer to work with when using 120v 7amp power. First in Eagle, I gave the 120v footprints a 100 mil wide path. I later edited this paths to have their own png file, and g code so as to add multiple offsets only arround them. Saving myself tons of time.  </p>
+								<p>The way I look at it is if I do require to fix or make another pcb, by making the minimun amount of offsets, Ill have more time for all this debug that will surely exist. As for example: Out of line line. </p>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-6.jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-7.jpg" alt="" /></span>
+								</div>
+								<p>I found this out of line lines (shown on the left), and had to go back a recreate the g code. I found them while placeing the machining operation in the nc - viewer online.</p>
+								<p> I also found this line that most lightly mods was picking up from the edge of the image (shown in the right). In the later case I just stoped the cnc machine before it started cutting that line, as it was at the end of the g-code.  </p>
+								<p>On the right what you are seeing is a conglomerate of all the g-codes into a single file. I do this because I cannot add multiple files to the nc-viewer online. It is also helpfull to see that everything lines up <strong>Before</strong> actually machining them all. </p>
+								
+								<div class="col-6 col-12-medium" style="align: center;">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-10.jpg" alt="" /></span>
+								</div>
+								<p>Above is the pcb I ended machining. With the extra offsets only on the 120v paths, a couple of mounting holes on the sides. And names on everything as to instantly communicate what is going on. We have the technology.</p>
+								<p> The time it takes machining greatly outweight the possible little mistake that might burn the microcontroller.  </p>
+								
+								<h3>debugging: </h3>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-12.jpg" alt="" /></span>
+								</div>
+								<p>I was having trouble with the pcb, and didnt realize that I connected the mosfet wrong. I also did not provide power to the bluetooth. Corrected by alex, I did some hands on engine repair and with a bit of luck I managed to get everything conected and working. Still ogly thoug.</p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-13.jpg" alt="" /></span>
+								</div>
+								<p>I also had to switch the relay, as the original one I solder just didnt work. And those 5 pis where hell to brake loose. As a result all the salder material all over. Bit more and could have sold it as a "chrome" pcb. Also, the relay broke while unsoldering one leg. </p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w12-output/ia/w12-ia-11.jpg" alt="" /></span>
+								</div>
+								<p>Here is the pcb for the Output Device Actually working! Yey!</p>
+								
+								<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w12-output/ia/w12-ia-14-ntsc.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						<p>Here is the way we hacked the coffee maker in order for the pcb to control it. It was all safe, and aproved by an Electrical Engeneer: Alex. </p>
+						<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w12-output/ia/w12-ia-15-ntsc.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						<p>Here is a nice colose up on how the coffee machine works. With a power source on the side for the output device. As it is intended to stand alone, 5v vcc and ground where introduced in circuit to power the dc side of the system.</p>
+							</div>
+							<div class="col-12">
+									<ul class="actions fit">
+										<li><a href="imagesimages/w12-output/ia/w12-Output Device w Bluetooth-Jorge Correa.zip" class="button primary fit" download> Compressed files corrected. Relay output pcb with out bluetooth. </a></li>		
+									</ul>
+							</div>
+							
+							<div class="col-12"><!-- the code -->
+									<p>Inside the attiny 88, was a simple code telling it to turn on and off every 5 seconds. Just to test the realy out. I supriseingly was enough to make "warm" coffee. </p>
+<pre><code>
+
+<#include <avr/io.h>
+#include <util/delay.h>
+
+
+int main() 
+{
+  
+  /* Configure the port A0 as Output */
+    DDRB = 0Xff;
+    
+    while(1)
+    {
+      
+      PORTB = (1 << PB0); /* Turn ON the Relay */
+      _delay_ms(500);
+      PORTB = (0 << PB0); /* Turn OFF the Relay */
+      _delay_ms(500);
+     
+    }
+
+    return (0);
+}
+</code></pre>
+							</div>
+							<h4>The list of electronic components:</h4>
+							<div class="col-12">
+									<ul class="">
+										<li>1x Pins 2x3</li>
+										<li>1x modulo bluetooth RN4871</li>
+										<li>2x capacitors  1uf</li>
+										<li>2x LED </li>
+										<li>1x microcontrolador ATtiny44</li>
+										<li>1x mosfetto 252</li>
+										<li>1x terminal 1x3 para coneccion de relay</li>
+										<li>1x relay de 5v mecanico (srd-05vdc-sl-c)</li>
+										<li>1x regulador sot23</li>
+										<li>1x 10k ohm</li>
+										<li>2x 330 ohm</li>
+										<li>1x 4.7 ohm (o similar)</li>
+										<li>1x 1k</li>
+										<li>1x 0k</li>
+									</ul>
+							</div>
+							
+							
+							<hr class="major" />
+									<h3>group assignment</h3>
+							<div class="row">
+							<div class="col-12 col-12-medium">
+									<p>I measured the current going through an outlet into the  Coffee Maker. In order for it to give a proper value of the resistance, I added water and actually brewed coffee.. for learning purposes of course. </p>
+									<p>And so I started with a certain left turn. It was a turning point when I attemped to measure the Ohm's between each outlet plug. </p>
+									<p>Fortunately I did not blow any fuses, yet everyone heard my mischeif. </p>
+							</div>
+							
+							<div class="col-12">	
+									<div class="col-8 col-8-medium">
+									<span class="image main"><img src="images/w11-input/w11-ga1.jpg" alt="" /></span>
+									</div>
+							</div>
+							
+							<div class="col-12 col-12-medium">
+									<p><strong>Current</strong> is closer to the rate at witch a river travels. Its not at all like volts and finding a potential diference.</p><p> Once I had this thoughroly expained, we proceded to hook up an extra plug for the wall. Running the current though the meter on one end.  </p>
+							</div>
+							
+							<div class="col-12">	
+									<div class="col-8 col-8-medium">
+									<span class="image main"><img src="images/w11-input/w11-ga2.jpg" alt="" /></span>
+									</div>
+							</div>
+							
+							<div class="col-12 col-12-medium">
+									<p><strong>Bazinga: 7.31 ohms</strong>  </p>
+							</div>
+							
+							<div class="col-12">	
+									<div class="col-8 col-8-medium">
+									<span class="image main"><img src="images/w11-input/w11-ga3.jpg" alt="" /></span>
+									</div>
+							</div>
+							
+							<div class="col-12 col-12-medium">
+									<p>This all equates to realizing that my relay, to turn on and off the coffee maker must be just as strong as the coffee its brewing. As it the heating element is basically a gigantinc resistance that mostly emits heat when current runs through, it require a large energy. </p>
+								
+							</div>
+							
+							
+							</div>
+						<hr class="major" />
+						
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+								
+									<p>From this assignment, I was able to create several connections to my final project as well as literal debugging conections. Actually drink my warm coffee semi-autonomously made, was bittersweet. An i would do it all the time.</p>
+									<p>It did require tons of debugging, so as a mental note I will make most of the bits and parts polished enough just to be jouint in a final week. </p>
+								
+								</div>	
+								
+								
+								
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Jan 16: principles and practices</a></li>
+												<li><a href="assignment-2.html">Jan 23: project management</a></li>
+												<li><a href="assignment-3.html">Jan 30: computer-aided design</a></li>
+												<li><a href="assignment-4.html">Feb 06: computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Feb 13: electronics production</a></li> 
+												<li><a href="assignment-6.html">Feb 20: 3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Feb 27: electronic design</a></li> 
+												<li><a href="assignment-8.html">Mar 06: Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Mar: 13: embeded programming</a></li> 
+												<li><a href="assignment-10.html">Mar 20: casting and molding</a></li> 
+												<li><a href="assignment-11.html">Mar 27: input devices</a></li>
+												<li><a href="assignment-12.html">Apr 03: output devices</a></li>
+												<li><a href="assignment-13.html">Apr 10: applications and implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

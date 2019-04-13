@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Electronics Design</h1>
+									</header>
+									
+								<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>Group Assignment	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>Use the test equipment in your lab to observe the operation of a microcontroller circuit board &#9744;</li>
+																	
+																</ul>
+																
+															<li><strong>Individual Assignment	&#9744;</strong></li>
+																<ul>
+																	<li>Redraw the echo hello-world board, add (at least) a button and a LED (with current limmiting resistor) check the design rules, make it, test it.  &#9744;</li>
+																	<li>Extra Credit: Simulate its operation. Render it. &#9744;</li>
+																</ul>
+															
+																
+															<li><strong>To Conclude & Reflect &#9744;</strong></li>
+															
+														</ul>
+														
+											</div>
+						<hr class="major" />
+									<h3>Group Assignment</h3>
+							<div class="row">
+							 
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images//.jpg" alt="Using the osiloscope passing thought a capacitor" /></span>
+								</div>	
+								<div class="col-12 col-12-medium">
+									<p>We had  a short but intensive review of the basic components that we might encounter while designing the PCB board. As follows</p>
+									<p>	Dc vs Ac Power source. Where the common house hold uses AC and the common gadget uses DC. The diverence in voltage change each has, where AC is always a sinusoidal wave around the 0v mark and Dc is more of a square drops and increases (never under 0v)
+									</p>
+									<p>One great confusion I had : What capacitors actually do. Resulting from the schematic on the 7.1 tutorial I followed. The overview was helpful but my electronic preparation is a tad weak still. As a result I found this Youtube Channel that added to my knowledge: <a href="https://www.youtube.com/channel/UCi4UZoZM0Iw9_tTeRjZd_bA"> AddOhms </a> 
+									</p>
+								</div>
+							</div>
+						<hr class="major" />
+									<h3>Individual Assignment</h3>
+							<div class="row">	
+								<div class="col-12 col-12-medium">
+								<p>The development of this week: Create a Self designed electronic design.</p>
+									<p>In this case I decided to use the circuit form the <a href="http://fabacademy.org/2019/docs/FabAcademy-Tutorials/week06_electronic_design/eagle_english.html"> "fabacademy Tutorial Section"</a> One that was recently brought to my attention and plan on use continuously form now on. Either way: I followed every step of 7.1 - Introduction to eagle.</p>
+									
+									<p>The reasoning behind it was: It has several inputs and outputs I'm going to use in the following weeks. It can be used in the Arudino environment (I later learned) becoming super advantageous. Its not too big of a project and will be able to complete in time.</p>
+								
+								</div>
+								<div class="col-12">
+									<h3>The Components list. </h3>
+									
+									 <dl>
+											<dt>1x 1 uf capacitor</dt>
+											<dt>1x Atmega88 /Atmega 328p microcontroller</dt>
+											<dt>1x button - 6mm switch</dt>
+											<dt>2x 10k resistor</dt>
+											<dt>1x 499k resistor</dt>
+											<dt>1x red led light</dt>
+											<dt>1x resonator 20k hz</dt>
+											<dt>avr isp md 2x3 pins</dt>
+											<dt>ftdi smd header 1 x 6 pins</dt>
+									</dl> 
+									
+										
+								</div>
+								
+								<p> I started on drawing the schematics in Kicad, an open source software for electronic design. The Schematic portion was very easy and well. </p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/kicad2.jpg" alt=" PICTURE ABOUT USING THE KICAD " /></span>
+								</div>
+								<p>However, at the moment when translating from the schematics to the footprints and the actual path connections I had a big problem that stoped me from doing so. Kicad recognized the connections as not properly engaged. Opening the Electrical Rule Cheaker it seemed so. But after the 3ed re-drawing the same cable and zooming in as far in as possible, somethigng smelled wrong. I was not alone, as my classmates also found themselves in a similar position. </p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/kicad-error.jpg" alt="PICTURE ABOUT THE KICAD NOT WORKING" /></span>
+								</div>
+								<p>Without the connecting paths correct, the softare will not let you switch to the footprint section of the pcb. After many hours stuck in the same position it became clear a better option was to start again in eagle. Due to the specifics of this problem and lack of mention of it online it seemed pointless to guess the actual problem.</p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/kicad.jpg" alt="PICTURE ABOUT THE KICAD NOT WORKING" /></span>
+								</div>
+			
+								<div class="col-12 col-12-medium">
+									<p>
+									In this case, we as a group used Kicad (the currently open source version of EDA).
+									</p>
+									
+									<p>
+									We followed the tutorial with slight modifications in the circuits. With this EDA we encountered a hard time translating the finishied schematics and into the actual path PCB design. We found plenty of support about the program, though blog commnets and little about our problem with the official soruce. The source documentation glaced over the issue and  i could no follow, or could my classmates. We gave up with using Kicad. It was still early in the week and found greater support for eagle. 
+
+									</p>
+									<p> In this case we did manage to get the Earlier Eagle version (where it was not yet owned by Autodesk).
+									</p>
+								</div>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/schematics.JPG" alt="! IMAGE OF EAGLE SCHEMATIC" /></span>
+								</div>	
+								
+				<div class="col-12 col-12-medium">
+									<p>
+									The process between the schematics and the later PCB path drawings was seamless.
+									</p>
+									
+									<p>
+									The hardest and most amusing part of the exercise begun. The puzzle of creating a 1 faced PCB with all the components. It was an on going discussion with the group, as everyone had one theory of how to make it easier. The instructors later pitched in with great advice and minutes to midnight the final path for my PCB was created. I did refine it a little to have the paths somewhat more efficient. In the end I saw a mutant fish as such. Either way the "eye" was  great pointer to define the Attiny 238 orientation. 
+									</p>
+						<div class="row">
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/almost  (1).jpg" alt="multiple attempts on the drawing of the paths" /></span>
+								</div>
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/almost  (2).jpg" alt="multiple attempts on the drawing of the paths" /></span>
+								</div>
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/almost  (3).jpg" alt="multiple attempts on the drawing of the paths" /></span>
+								</div>
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/almost  (4).jpg" alt="multiple attempts on the drawing of the paths" /></span>
+								</div>
+								
+						</div>
+									
+									
+				</div>
+				
+						<h3>The final design looked like so: </h3>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/final.PNG" alt="	! Final cut & ! Mutant fish diagram" /></span>
+								</div>
+						<h3>After we load it up into the cnc linux.</h3>
+						<p>Engraved the paths into the pcb creating this monster. The settings where kept form the week 5 electronic production. </p>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/cut.jpg" alt="	! Final cut & ! Mutant fish diagram" /></span>
+								</div>
+								
+								<hr class="major">
+							<div class="row">
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/drawing.jpg" alt="	! Final cut & ! Mutant fish diagram" /></span>
+								</div>	
+								
+								<div class="col-6 col-6-medium">
+									<span class="image main"><img src="images/w7-electornic design/pcb before.jpg" alt="	! Final cut & ! Mutant fish diagram" /></span>
+								</div>	
+							</div>
+								
+								
+								<div class="col-12 col-12-medium">
+												
+									<p>
+									After the final design was edged in the cnc, I sent the same bit to cut. A 60 Deg Pointed V Bit Engraving tool, it was however too thick and actually cut through some of my outer paths. So engraved and cut the PCB board again. And this time made the engraving with a 60 deg pointed v bit tool and the cut with a 30 deg pointed v bit tool, aside in mods I sent a 1mm tool instead of a .35 mm tool bit in order to make the offset of the cutting path add more room without actually modifying the png file. Too bad later on I was not able to tell the distinction and acctually used the broken path pbc soldering on all components and found it easier to fix the broken path with extra sodering material rather than changing the pcb. 
+
+									</p>
+								
+								</div>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w7-electornic design/pcb solder.jpg" alt="	! FINAL PBC BOARD !!" /></span>
+								</div>
+							</div>
+						
+						<div class="row">
+						<h4></h4>
+						</div>
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+									<p>This week was a hard yet very interesting week. Much more creative than the electronic production week, and at the same time it all build on that week, highlighting the importance of getting the concepts straight on that week. </p>
+									<p>Design was supper cool, and the part of placing the paths was oddly  satisfying. I think like design, creating multiple iterations was the best way to solve for the problem. 
+</p>
+									<p>When instead of constantly modifying the paths to fit a specific need, restarting when i got sort of stuck and repeating was the best thing i could have done to solve the path connections quick. With the help of taking a snapshot of the path I could not solve. When i did solve for it, i did the same process and it kept refining until i had something much more condense than the beginning.</p>
+									<p>I freaking love to sawter picess so small and of my own creating into the board. Headphones on full blast and the window open as the twisers and iron make their thinkg giving electronic life! Yeah I have had probelms, and solved them. As is creating a specific path onto the pcb where there was non, but it was so much fun Im actually glad it happened as my ssawtering abilities and time ot create is only reducing. It is however important to create a case and have a tuperware or soemthing to protect the pbcs otherwise they are so easy to creack the copper off the board is not amussing. Ill be making 3d printed cases from know on for everyithing i create. </p>
+									<p>I still have to focuse harder in order not to make silly mistakes as cutting the pcb with the wrong bit would be restated. A big loss of time mostly.  
+</p>
+									
+								</div>	
+								<div class="col-12">
+								Find here downloads:
+								<ul>
+									<li><a href="images/w7-electornic design/files/Proejct 1.kicad_pcb" download>Proejct 1.kicad_pcb</a></li>
+									<li><a href="images/w7-electornic design/files/Proejct 1.sch" download>Project 1.sch</a></li>
+									<li><a href="images/w7-electornic design/files/MUTANT FISH PROGRAMER.png" download>Mutant Fish Png</a></li>
+									<li><a href="images/w7-electornic design/files/CUT - MUTANT FISH PROGRAMER.png" download>Mutant Fish - Cut Png</a></li>
+								</ul>
+								</div>
+								
+								
+								
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Jan 16: principles and practices</a></li>
+												<li><a href="assignment-2.html">Jan 23: project management</a></li>
+												<li><a href="assignment-3.html">Jan 30: computer-aided design</a></li>
+												<li><a href="assignment-4.html">Feb 06: computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Feb 13: electronics production</a></li> 
+												<li><a href="assignment-6.html">Feb 20: 3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Feb 27: electronic design</a></li> 
+												<li><a href="assignment-8.html">Mar 06: Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Mar: 13: embeded programming</a></li> 
+												<li><a href="assignment-10.html">Mar 20: casting and molding</a></li> 
+												<li><a href="assignment-11.html">Mar 27: input devices</a></li>
+												<li><a href="assignment-12.html">Apr 03: output devices</a></li>
+												<li><a href="assignment-13.html">Apr 10: applications and implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

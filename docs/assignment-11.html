@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Input Devices</h1>
+									</header>
+									
+									<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>Group Assignment	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>Measure the analog levels and digital signals in an input device &#9744;</li>
+																	
+																</ul>
+																
+															<li><strong>Individual Assignment	&#9744;</strong></li>
+																<ul>
+																	<li>Measure something: add a sensor to a microcontroller board that you have designed and read it. &#9744;</li>
+																	
+																</ul>
+															
+																
+															<li><strong>To Conclude & Reflect</strong></li>
+															
+														</ul>
+														
+											</div>
+							<hr class="major" />
+								<h3>Group Assignment</h3>
+						<div class="row">
+							 
+							
+							<div class="col-12 col-12-medium">
+									<p>For the Digital signals, I was hopping to measure the capacitance of something. As I was looking for deeper dive on to the capacitance knowledge.</p>
+									<p>A quick internet search told me to measure capacitance with the<a href="https://www.google.com/search?client=firefox-b-d&q=measuring+capacitance#kpvalbx=1"> "capacitance" </a> option on the multimeter. Turns out this setting is not as common as I first envisioned. </p>
+									<p>Or at least my multimeeter did not have it. </p>
+									<p>Because caacitance is "the ability of a system to store an electric charge" a normal multimeter will not read how much a capacitor will actually take in charge. There is however a way.</p>
+									<p> When the miltimenter is set to contact setting, it will send out charge. When connected to the capacitor the charge will be absorbed by the system.  </p>
+									<p>Depending on the size of the capacitor, it will take different amount to charge it. </p>
+							</div>
+							
+						<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w11-input/w11-capacitance-1.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						
+						<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w11-input/w11-capacitance-2.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						
+						<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w11-input/w11-capacitance-3.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						<div class="col-12 col-12-medium">
+									<p>What I show is <stong>1000 uf  to 47 uf</strong> capacitors. And It is clearly shown how it takes longer for the multimeter to get from no current (1), to full contact (0) and back to no current (1). The lapse between 1 and 1 is where the capacitor's system is gaining charge. The 1000 uf takes a couple of seconds. The 47 uf is almost not registered by the multimeter. </p>
+									<p>Given, my multimeter is basic, due to me being out of the fabacademy at the time.</p>
+									<p>Based on how much time elapsed, it is possible to determine the capacitance value of the system without reading it from the component. In the given equation: <strong>t = R * C</strong>, <ul><li>t = time constant</li><li>R = resistante in ohms (presumably to limit the rate at witch energy flows in)</li><li>C = capacitance in farads</li></ul> </p>
+									<p>The general theory beind all this I read from <a href="https://www.electronics-tutorials.ws/rc/rc_1.html">here.</a> An electronics-tutorial.  </p>
+									<p>Im finding it very tough to actually measure acurately the time from when it starts to when it stops charging. And currently the 1000 uf capacitor is the biggest one I have at my disposal. It was an intresting experiment no the less. </p>
+									<ul>
+									<li>1000 uf / 5 ohm  = 200 time units </li>
+									<li>some actual engeneer took it and left me without the real value. <br> but if I had to guess: 524.5 uf / 5 ohm =  104.9 time units </li>
+									<li>49 uf / 5 = 9.8 time units</li>
+									</ul>
+							</div>
+						
+					</div>
+						<hr class="major" />
+							<h3>Individual Assignment</h3>
+							<div class="row">
+							 
+							<!--	<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+								</div>	 -->
+								<div class="col-12 col-12-medium">
+									<p>In the individual assignment I got into undersdtanding the capacitive difference sensor theory. </p>
+									<p><strong>The theory:</strong></p>
+									<p>The idea is that current flows, through every coductive surface and that by doing so create a very week electromagnetic wave. </p>
+									<p>We as humans, are as well creating the most tinny electromagnetic wave around us. </p>
+									<p>With this, whenever a human limb gets closer to an electro-magnetically charged surface it disrupts the status quo of its magnetic field with its own. </p>
+									<p>In the following circuit we detect this aditional pulse over the pulse already created with the current filling the charge objects. </p>
+									<p>The earlier in short is my interpretation of how a capacitive sensor works in theory. </p>
+									<p><strong>The practice:</strong></p>
+									<p>I followed a tutorial and actually created a very simple circuit using and arduino, to prove the theory behind the touch sesonr. See the video below. </p>
+									<p>
+									I used the following equipment:
+									<ul>
+									<li>1x Aluminum foil</li>
+									<li>1x 1M ohm resistor</li>
+									<li>1x Arduino uno</li>
+									<li>1x Connection cable</li>
+									<li>1x LED Light</li>
+									
+									</ul>
+									</p>
+								</div>
+								<br>
+								<div class="col-12">
+									
+									<div class="col-8 col-12-medium">
+									<span class="image main"><img src="https://hackster.imgix.net/uploads/attachments/412507/circuit_o4dxHY1EF3.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="" /></span>
+									<h6>Image and code from hackerster, by amal mathew</h6>
+									</div>
+									
+									
+									
+									
+									
+<pre>
+	<code>
+#include <CapacitiveSensor.h>
+
+CapacitiveSensor   cs_2_4 = CapacitiveSensor(2,4); // 1M resistor between pins 2 & 4, pin 4 is sensor pin, add a wire and or foil
+
+int in = 2; 
+int out = 4;  
+int state = HIGH;  
+int r;           
+int p = LOW;    
+long time = 0;       
+long debounce = 200;
+void setup()
+{
+  pinMode(4, INPUT);
+  pinMode(8, OUTPUT);
+}
+void loop()                    
+{
+ 
+  r = digitalRead(4);
+  if (r == HIGH && p == LOW && millis() - time > debounce) {
+    if (state == HIGH)
+      state = LOW;
+    else 
+      state = HIGH;
+    time = millis();    
+  }
+  digitalWrite(8, state);
+  p = r;
+}
+	</code>
+</pre>
+									
+								</div>
+								<p>Installing the actual library was an unexpected troubleshooting I had to do. I ended downloading it from : <a href="https://playground.arduino.cc/Main/CapacitiveSensor/">here, the arduino playground</a></p>
+								
+						
+						<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w11-input/capasitive touch.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+							
+							<p>Find the source Tutorial 
+							<a href="https://www.hackster.io/amalmathewtech/touch-controlled-light-using-arduino-d2f878">by Amal Mathew showing: Touch Controlled Light Using Arduino
+							</a>
+							</p>
+							
+							<p>In this subject, knowing your resistors was key and as a result I found 2 helpfull calculators. 
+							<ul>
+							<li><a href="https://www.allaboutcircuits.com/tools/resistor-color-code-calculator/">Oldschool Resistors</a></li>
+							<li><a href="https://www.hobby-hour.com/electronics/smdcalc.php">SMD Resistors</a></li>
+							</ul></p>
+							
+							<p>In the end, I know I'll fully grasp the resistors by memory, but before that is nice to have I think less to look up or debug. </p>
+							</div>
+						
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+									<p>This week was a nice advance for my final project, as it determined what type of relay I need. At the same time it was a productive time to soak in about capacitive theory. It is certainly the most apropiate input for the final project and one of the most intresting in my eyes as well (a nice combo).</p>
+									<p>It also gave me a deeper understanding of the capacitance units farad, and a deeper dive into that whole new concept. </p>
+									<p>I regret not starting off with my pcb board "mutant fish" for this project as it is something ill eventually do. </p>
+							</div>	
+								
+								
+								
+					</section>
+
+						</div>
+					</div>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Jan 16: principles and practices</a></li>
+												<li><a href="assignment-2.html">Jan 23: project management</a></li>
+												<li><a href="assignment-3.html">Jan 30: computer-aided design</a></li>
+												<li><a href="assignment-4.html">Feb 06: computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Feb 13: electronics production</a></li> 
+												<li><a href="assignment-6.html">Feb 20: 3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Feb 27: electronic design</a></li> 
+												<li><a href="assignment-8.html">Mar 06: Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Mar: 13: embeded programming</a></li> 
+												<li><a href="assignment-10.html">Mar 20: casting and molding</a></li> 
+												<li><a href="assignment-11.html">Mar 27: input devices</a></li>
+												<li><a href="assignment-12.html">Apr 03: output devices</a></li>
+												<li><a href="assignment-13.html">Apr 10: applications and implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

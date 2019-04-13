@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Computer-Controlled Machining </h1>
+									</header>
+									
+								<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>Group assignment 	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>Test Runout &#9744;</li>
+																	<li>Alignment &#9744;</li>
+																	<li>Speeds &#9744;</li>
+																	<li>Feeds &#9744;</li>
+																	<li>Toolpaths for your machine &#9744;</li>
+																</ul>
+																
+															<li><strong>Individual project	&#9744;</strong></li>
+																<ul>
+																	<li>Make something big on a CNC machine. &#9744;</li>
+																	<li>Explain how you made your files &#9744;</li>
+																	<li>Show how you made somethign big (setting up the machine, using fixtures, test joints, adjusting feeds, depth of cut &#9744;</li>
+																	<li>Described problems and how you fixed them &#9744;</li>
+																	<li>Included your design files and ‘hero shot’ photos of final object &#9744;</li>
+																</ul>
+															
+															
+																
+															<li><strong>To Conclude & Reflect</strong></li>
+															
+														</ul>
+														
+											</div>
+						<hr class="major" />
+									<h3>Group assignment </h3>
+							<div class="row">
+								<div class="col-12">
+									<p>In our case we will be using the machine CNC Roter 1325.  A test file borrowed from <a href="http://archive.fabacademy.org/2018/labs/fablabzoi/students/alexdavid-tocagonanrango/wk8.html" > Alex </> and  <a href="http://fab.academany.org/2018/labs/fablabzoi/students/guillermo-guerra/week7.html" > Guillermo </a> Before that. Keeping with the local fab's tradition. An exagonal shaped cut part containing variable cutting methods for assembly.   </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/group/g-1.jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/group/27.jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/group/28.jpg" alt="" /></span>
+								</div>
+								
+								
+								<div class="col-6 col-12-medium">
+								<p>Imported the file into Artcam.</p>
+									<span class="image main"><img src="images/w8-cnc/group/g-1(0).jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+								<p>create new model</p>
+									<span class="image main"><img src="images/w8-cnc/group/- (13).jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+								<p>Vectors >Import > select .dxf (2004 version) </p>
+									<span class="image main"><img src="images/w8-cnc/group/- (14).jpg" alt="" /></span>
+								</div>	
+								
+								<div class="col-6 col-12-medium">
+								<p>profiling the path.</p>
+									<span class="image main"><img src="images/w8-cnc/group/- (15).jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+								<p>2d area clerance (just to score)</p>
+								<p>. = 15 mm , + = over 15, - = under 15.</p>
+								<p>Everything in .05 mm increments </p>
+								<span class="image main"><img src="images/w8-cnc/group/- (16).jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+								<p>G-code simulation <a href="https://nraynaud.github.io/webgcode/">here</a> </p>
+								<p>artcam passes 5 times to cut (3mm plunge motion, and 2.5mm plunge to score motion)</p>
+								<span class="image main"><img src="images/w8-cnc/group/- (17).jpg" alt="" /></span>
+								</div>
+								
+								<div class="col-6 col-12-medium">
+								<p>Us loading the code to cnc linux</p>
+									<span class="image main"><img src="images/w8-cnc/group/g-2 (1).JPG" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+								<p>The actual tool to cut with (this case a straight doubel fulte flat head 4mm milling bit)</p>
+									<span class="image main"><img src="images/w8-cnc/group/- (7).JPG" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+								<p>setting the Z-axis homeing</p>
+								<p>by touching the brass sensor and offseting 15mm down</p>
+									<span class="image main"><img src="images/w8-cnc/group/- (8).JPG" alt="" /></span>
+								</div>
+								
+	
+								</div>
+								
+								<div class="col-6 col-12-medium">	
+								<p>In this case I modified the original file made by Gillermo and gave it much more smaller and partern even steps. Unfortunately we later realized the material was closer to 15.2 than 15mm (as the provided intended) So the material had a snug fit at 15.25 mm(the widest). <strong>I'll be using a joint clearance of 15.35 just so it sort of slides.. hopefully. </strong></p><a href="images/w8-cnc/joint test 15mm mat.dwg" download>Find the Original File here</a>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/26.JPG" alt="" /></span>
+								</div>
+								
+								
+								
+
+								
+								
+							</div>
+						<hr class="major" />
+									<h3>Group Assignment - Safety first</h3>
+							<div class="row">
+						
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="https://cdn.instructables.com/FT4/F9SE/HK6XAYWN/FT4F9SEHK6XAYWN.LARGE.jpg" alt="" /></span>
+									<p>Picture from instructables</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>no sandals. Use correct footware protection!</li>
+										<li>protect your hair (by holding it and not letting it fly) At the same time, dont ware hoodies or any other strings hanged. Dont have long sleves hanging. </li>
+										<li>protect your eyes with glasses and ears with ear covers. </li>
+										<li>always be with another person when machining as to not forget any step and to watch over each other and have a proper machining process</li>
+									</ul>
+									<div class="col-12">
+										<iframe
+										src="https://youtu.be/t5MwlJV_Clc">
+										</iframe> 
+									</div>
+								</div>
+								
+							</div>
+								
+						<hr class="major" />
+						<h3>Individual Assignment</h3>
+							<div class="row">
+						
+								<div class="col-12 col-12-medium">
+									
+									<h4>Reasearch</h4>
+									<p>There is soo much to do, and I'm especially intrested in this section's capabilities to create and control insane joints that otherwise would never be cost/tiem effective. With that said, *as my instructor pointed it out to me* Ill be sharing this article about <a herf="https://cdn.instructables.com/ORIG/FW1/4AF2/I2VLGSNJ/FW14AF2I2VLGSNJ.pdf" download> 50 Digital joints (download printable poster yay!), </a> also breafly mentioned in class. Aparently flexiblestream is atributed to be owner by <a href="https://www.archdaily.com/797107/50-downloadable-digital-joints-for-woodworking"> archidaily</a> but the source webpage is broken.   </p>
+									<ul>
+									<li>In the following is a list of interesting resources I found stubeling about. </li>
+									<li><a href="http://www.jochen-gros.de/A/Virtuelle_Produktion_files/technofactory%20miniplants.pdf">A papaer evaluating the use of cnc for small and large scale production in furnite, talking as a case study germany </a></li>
+									<li><a href="https://furniturefab2013.files.wordpress.com/2013/09/joints.pdf">A presentation comparing the traditional and digital jointery </a></li>
+									<li><a href="https://vimeo.com/240958206">A carpentry joining traditional craft with digital production. (in this case 3D printing and not millng, intresting non the less) </a></li>
+									
+									<li><a href="https://alternative11.livejournal.com/33423.html">A overview of the small to extramly large wood-basd computer prodcution from the recent past. Covering everything from advanced furniture tecnologies as is double sided kerfin, not possible without computer machining to self suporting structures for public spaces like the Metroplo Parsol. </a></li>
+									
+									</ul>
+								</div>
+								<h4>Individual Assignment - Furniture Development</h4>
+								<div class="col-12">
+								<p>In this section I decided to use the previous chair iteration done on On-shape in Computer <a href="assignment-4.html"> aidded design week.</a>  And redraw it using snapfits (taken from earlier reaserch). </p>
+								<p>Creating in this case a rocking chair simply for the fun of it. I would be proving the building method, and a place to rest. Who doesn't love a roking chair?</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/1.jpg" alt=" " /></span><p> We see the final chair. Reduced from the initial dimentions to fit in 1/2 sheet of playwood.</p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/2.jpg" alt=" " /></span> 
+									<p>Solidworks gave me a hard time exporting all multi-body part as an assembly. It also was not usefull as the assembly did not have any mates shown. I instead saved them as a single parts and rebult it ina an assembly file. Find it <a href="https://www.javelin-tech.com/blog/2017/09/solidworks-save-bodies-without-copies/">here</a>. I normaly would work as multibody parts and just make an excel spread-sheet for cutting later on. Never cutting as complex shapes as it is required in this instance. </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/4.jpg" alt="" /></span>
+									<p>I found a  helpful video to create the cut in solidworks. In order to later send this to cut. Local production would typically require complex shapes to be printed and re-drawn by the carpenters. Time consuming and never exactly the part required.<a href="https://www.youtube.com/watch?v=USFq703l1ao"> Find the video here. </a></p>
+								</div>
+									
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/5.jpg" alt="" /></span>
+									<p>Here is the final result of the tutorial. Every part is mounted on top of the actual board size. </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/6.jpg" alt="" /></span>
+									<p>Here is me mating the assembly again, mainly to mantain that all joints are aprox what they should be and that everything is in order. </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/7.jpg" alt="" /></span>
+									<p>Here we see the final sheet of ply and most of the pieces in the assembly. Ready to assemble for cutting portion of the setup. <a href="">  </a></p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/8.jpg" alt="" /></span>
+									<p>After the 1st setup of the material on top of the sheet, It was my thinking that too much material became wasted for a longer rocking motion. Aside the joint females from the lateral chair parts became assembled upside down (not showing the relif for the sanp fit to rest on). Aside the panels from the back rest and bottom did not have all the snapfit releif either. </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/9.jpg" alt="" /></span>
+									<p>In the assembly some referances in the drawing where not showing, something broke and the relif extrude cut was just not there. I ended just deleting the references, and hope I dont have to move the drawing again. lol. The best ways to avoid this problems is though proper organization, using ecuations (I use on important things as material thickness) and references based solemly from the main planes. I just didnt due to time constrains.  </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/10.jpg" alt="" /></span>
+									<p>We find the snap-fit relif fixed and a 4.5 Dia mm spaceing for the 4mm  Dia bit. </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/11.jpg" alt="" /></span>
+									<p>In this case, I was going to implement a second snap fit in order for the joint to become harder to open. Then i realized that that will just brake as that bridge would be the first support of person's full weight and weight multiple force when stoping the person as it sits down. Surely to brake. I decided to instead to decrease a 1mm extra so that the fill will be a pain to insert but never will it brake loose. This joint was initially insipred by the chilean pavilion construction method, part of it we still keep in the fab.  </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/a.JPG" alt="" /></span>
+									<p>close-up on the snaping mechanism. (chilean pavelion project of 2013)</p>
+								</div>
+								
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/12.jpg" alt="" /></span>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/13.jpg" alt="" /></span>
+									<p>Here we see the rocking chair with the rocking base shortened from 1000mm to about 760mm. Resulting in a higher efficiency cut.  </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/14.jpg" alt="" /></span>
+									<p>That is 1/2 a sheet of play my friend! Think about this, a 15 or 18mm thickness play sheet with our finest hardwood veneer finish (Seyke wood, depending on who you ask) outside will be $90-150. That means the chair you are looking at is $45-75 in prime material. Add a $20 days of labour, $5 in linseed oil and you get a finished product. Multiply the production cost by 3 (rule of thumb for adicional labour and utility markup and you are still talking about $210-300. YOU ARE NOW AT A PRICE COMEETITIVE IN AMAZON. The shoking thing is that you are doing a custom part, not a scale production.   </p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/16.jpg" alt="" /></span>
+									<p>I used autocad to read the exported .dxf file, later edited a couple details. Separating the releif cuts (5mm plung action) and the full material cut paths (15mm plunge cut). Have a look at how I did that <a href="http://help.solidworks.com/2018/english/solidworks/sldworks/t_drawings_dwg_dxf_export.htm">here </a> The catch is that you require to do it from a drawing, you cant do it directly from a part or assembly. </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/25.jpg" alt="" /></span>
+									<p>The amazon fast search for market price rocking chairs.</p>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/16.jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/17.jpg" alt="" /></span>
+									<p>In the end im exporing to experiment what might be faster to create the releif tool path. If though the 3D geometry in solidworks or though the post process in autodesk. To be confirmed. The advantage in solidworks might be that you could and should make a releif based on a global variable so as to change this when the bit changes. But that means other parts of the geometry as the snapfits might also have to be added with global setting. Good practices but time consuming and not always worth it. Ill keep in mind though. </p>
+									
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/99.jpg" alt="" /></span>
+									<p>Solidworks! Solidworks is faster. Always with proper planning. </p>
+									<p>Especially making this complex jointery, in mass production you would create smart components and have parameters on the releifs for the bits to adapt to the tooling. </p>
+									<p>In my case, i was all done by hand on autocad. I later found compatiblity issues I was never expecting and eat all my designated machining time. It became close to 2 working days.  </p>
+									
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/29 (15).jpg" alt="" /></span>
+									<p>This is me trying to machine arround the part in artcam after importing the file from autodesk with corrections. </p>
+									
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/29 (16).jpg" alt="" /></span>
+									<p>This is me finding out that multiple contours where opened after I purpusefully closed them in autodesk. For this inspection: Assistant > vector tools > vector doctor (green cross) {select all paths} > Idenify.</p> 
+								</div>
+								
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/213412.jpg" alt="" /></span>
+									<p>This section art cad showed me an error circle. In reality it was pointig out that the paths intersected. <strong>not a problem</strong> It just had me searching futlessly what the problem might be. </p> 
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (21).jpg" alt="" /></span>
+									<p>I found a couple of not proper trims that didnt show up in autocad but did show up in illustrator. </p> 
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (25).jpg" alt="" /></span>
+									<p>Alex (instructor) told me of a siilar problem he had before. And how he had fixed it by importing the dxf file into illustrator, later saved as version: illustrator 3 . And opened it flawlessly. In my case just multiplied the problem. </p> 
+								</div>
+							</div>
+							<h4>Technique that sort of worked arround the already closed profile that didnt actually work. </h4>
+							<div class="row">
+								
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (22).jpg" alt="" /></span>
+									<p>Alex (instructor) told me later= using Illustrator to figure out open contours. 1. cntl + A (selecting all paths) cntl + j (joining all paths) All paths that sort of went crazy where the opend ones. I paciently folowed them and <strong>In Autocad</strong> extended every path (both crossing lines) and proceeded to trim them again. </p> 
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (18).jpg" alt="" /></span><p>Ale (class mate) later indicated a "overkill" autocad command. I started using it with tollerance 0.000001 (default) but ended using 50 in order for it to work. It would typically erase 1 line and later i re-drew it. Join the full path and hoped it was closed.  </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (20).jpg" alt="" /></span><p>I later just hypothise the real problem is that artcad has an <strong> issue with using cicle translating into straight lines.</strong> I hence proceeded to create fillets and splines instead of cicles with trims. The software later lett me export my g code. A day and more, late.   </p>
+								</div>
+								
+								<h4>Proving my concept chair built</h4>
+								
+								<p>In this case because we where about to cut a 15mm ply, I found it best to be sure what I was cutting would be correct. Last thing I want are wood cuts that cannot assemble and are only good for fire wood. </p>
+								
+								<div class="col-6 col-12-medium"><span class="image main">
+									<img src="images/w8-cnc/29 (33).JPG" alt="" /></span><p>The first try i got my scale wrong  (in accrodance to the mdf 3mm material.) So the joints where frutelless. </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (34).JPG" alt="" /></span><p>It did show me problems that could be fixed. </p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/29 (32).JPG" alt="" /></span>
+									<p>Later to cut in proper scale, the file was as corrupt as our politics. I sent it to illustratos, saved it as ilustrator 3 and sent it to the lasercutting machine to find it working flawlessly.   </p>
+								</div>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/1.jpg" alt="" /></span>
+									<p>In the end this was my prototype. Brought me lots of joy. It still has some balancing issues I will have shake off on the account that this week is done.    </p>
+								</div>
+								
+							</div>
+							<h3>The Machine Cutting</h3>
+							<p>The actual machining was done in a <strong>15mm Ply</strong> with a <strong>2 flute, flat head, 6mm bit.</strong> </p>
+							
+							<div class="row">
+							<p>Setting up the playwood, I didnt think of placing bridges and so I decided to curreclty align screws to hold the finished cut parts in place. It looked like so: </p>
+							
+								
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (11).jpg" alt="" /></span>
+									<p>   </p>
+								</div>
+								<p>Using the raw data and pin pointing the place where a screw would not touch the bit.</p>
+								<p>I had a problem in the time of cutting, when the bit did touch a screw that was placed before the cnc's g code, in order to fix the ply wood in place.  </p>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (14).jpg" alt="" /></span>
+									<p>   </p>
+							</div>
+							<p>I noticed that the cut was still not cutting all the way though the material. So when the machining stoped, I used the time to re-zero the z axis about 2 mm deeper. </p>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (17).jpg" alt="" /></span>									
+							</div>
+							<p>When the final machining was done, there still was 1 hole in the side joint of the chair that I missed when loading the code in. As youll see in the next image. </p>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (21).jpg" alt="" /></span>									
+							</div>
+							<p>The answer was simple, but not necesarily Intuative. Using the same homming in the x,y and z axis loaded only the missing g-code to cut the missing hole. And It worked fine. </p>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (19).jpg" alt="" /></span>									
+							</div>
+							<p>The final machining was done. It came out like properly. It did however became hard to fit, as the snapfits where too tight and was required to cut the teeth. </p>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (22).jpg" alt="" /></span>									
+							</div>
+						</div>
+						<h3>The final product</h3>
+						<div class="row">
+							
+							<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (29).jpg" alt="" /></span>									
+							</div>
+							<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (28).jpg" alt="" /></span>									
+							</div>
+							<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w8-cnc/me/final/a (25).jpg" alt="" /></span>									
+							</div>
+						<div class="col-12">
+							<video width="100%" height="100%" controls>
+								  <source src="images/w8-cnc/me/swivel.mp4" type="video/mp4">
+								 
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+						</div>
+							
+							
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+									<p>Honestly after everything I would have liked to plan a little bit better how to create all the joints, more than just a thimbnail sketch. It would have taken less of my time in the long run. </p>
+									<p>The other thing is I would have loved to learn cam hsb plug-in for solidworks rather than artcam. As the amount of time spent into the simple process would have un-doubly been enough for that learning experiance. Instead of dealing with senceless software incompatiblity issues. </p>
+									<p>I still am not done with my cnc milling as the last night was upon us before my gcode working. </p>
+								</div>	
+								<p><a href="images/w8-cnc/me/make somethign big -fab.sldprt">Find the solidworks cad</a>
+								<a href="images/w8-cnc/me/make somethign big -fab2.dwg">Find the .dwg</a>
+								<a href="images/w8-cnc/me/make somethign big -fab.dxf">Find the .dxf</a></p>
+								
+								<p>
+								
+								
+								
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Jan 16: principles and practices</a></li>
+												<li><a href="assignment-2.html">Jan 23: project management</a></li>
+												<li><a href="assignment-3.html">Jan 30: computer-aided design</a></li>
+												<li><a href="assignment-4.html">Feb 06: computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Feb 13: electronics production</a></li> 
+												<li><a href="assignment-6.html">Feb 20: 3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Feb 27: electronic design</a></li> 
+												<li><a href="assignment-8.html">Mar 06: Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Mar: 13: embeded programming</a></li> 
+												<li><a href="assignment-10.html">Mar 20: casting and molding</a></li> 
+												<li><a href="assignment-11.html">Mar 27: input devices</a></li>
+												<li><a href="assignment-12.html">Apr 03: output devices</a></li>
+												<li><a href="assignment-13.html">Apr 10: applications and implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>E:\Dropbox\jhc.design\proyectos\jhc.design\Fab Academy\descarte\week - 7 Design electorincs\Test project\Proejct 1.sch</source>
+    <date>2019-02-26 12:32:26 PM</date>
+    <tool>Eeschema 4.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Proejct 1.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="S1">
+      <value>button</value>
+      <footprint>fab_6MM_SWITCH</footprint>
+      <libsource lib="fab" part="6MM_SWITCH6MM_SWITCH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C756CCE</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>AVRISPSMD</value>
+      <footprint>fab_2X03SMD</footprint>
+      <libsource lib="fab" part="AVRISPSMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C7570C5</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>ATTINY441-SSU</value>
+      <footprint>SO14</footprint>
+      <libsource lib="atmel" part="ATTINY441-SSU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C7572FD</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>499</value>
+      <footprint>fab_R1206FAB</footprint>
+      <libsource lib="fab" part="RES-US1206FAB"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C75803B</tstamp>
+    </comp>
+    <comp ref="M1">
+      <value>FTDI-SMD-HEADER</value>
+      <footprint>fab_1X06SMD</footprint>
+      <libsource lib="fab" part="FTDI-SMD-HEADER"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C7581CE</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1uf</value>
+      <footprint>fab_C1206</footprint>
+      <libsource lib="fab" part="CAP-UNPOLARIZED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C758400</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>Red</value>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C75860C</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>fab_R1206FAB</footprint>
+      <libsource lib="fab" part="RES-US1206FAB"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C7589C3</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>fab_R1206FAB</footprint>
+      <libsource lib="fab" part="RES-US1206FAB"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C758E9F</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>Resonator</value>
+      <libsource lib="device" part="Resonator"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C758F8C</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="fab" part="6MM_SWITCH6MM_SWITCH">
+      <footprints>
+        <fp>*6MM_SWITCH*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">6MM_SWITCH6MM_SWITCH</field>
+        <field name="Footprint">fab_6MM_SWITCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P" type="passive"/>
+        <pin num="2" name="P1" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="S1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="atmel" part="ATTINY441-SSU">
+      <aliases>
+        <alias>ATTINY841-SSU</alias>
+      </aliases>
+      <description>SO14, 4k Flash, 256B SRAM, 256B EEPROM, ADC, ACI, dW</description>
+      <docs>http://www.atmel.com/Images/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf</docs>
+      <footprints>
+        <fp>SO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">ATTINY441-SSU</field>
+        <field name="Footprint">SO14</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="(PCINT8/CLKI/XTAL1/ADC11)PB0" type="BiDi"/>
+        <pin num="3" name="(PCINT9/INT0/XTAL2/ADC10)PB1" type="BiDi"/>
+        <pin num="4" name="(PCINT11/dW/~RESET~/ADC9)PB3" type="BiDi"/>
+        <pin num="5" name="(PCINT10/RXD0/ICP2/CLKO/TOCC7/ADC8)PB2" type="BiDi"/>
+        <pin num="6" name="(PCINT7/~SS~/TXD0/ICP1/TOCC6/ADC7)PA7" type="BiDi"/>
+        <pin num="7" name="(PCINT6/MOSI/SDA/XCK1/TOCC5/ACO1/ADC6)PA6" type="BiDi"/>
+        <pin num="8" name="(PCINT5/MISO/TXD1/T2/TOCC4/ACO0/ADC5)PA5" type="BiDi"/>
+        <pin num="9" name="(PCINT4/SCK/SCL/RXD1/T1/TOCC3/AIN11/ADC4)PA4" type="BiDi"/>
+        <pin num="10" name="(PCINT3/SCK/XCK0/T0/TOCC2/AIN10/ADC3)PA3" type="BiDi"/>
+        <pin num="11" name="(PCINT2/~SS~/RXD0/TOCC1/AIN01/ADC2)PA2" type="BiDi"/>
+        <pin num="12" name="(PCINT1/MOSI/TXD0/TOCC0/AIN00/ADC1)PA1" type="BiDi"/>
+        <pin num="13" name="(PCINT0/MISO/AREF/ADC0)PA0" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="fab" part="AVRISPSMD">
+      <footprints>
+        <fp>*2X03SMD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">AVRISPSMD</field>
+        <field name="Footprint">fab_2X03SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="MISO" type="passive"/>
+        <pin num="2" name="VCC" type="passive"/>
+        <pin num="3" name="SCK" type="passive"/>
+        <pin num="4" name="MOSI" type="passive"/>
+        <pin num="5" name="RST" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="fab" part="CAP-UNPOLARIZED">
+      <footprints>
+        <fp>*C1206*</fp>
+        <fp>*C1206FAB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CAP-UNPOLARIZED</field>
+        <field name="Footprint">fab_C1206</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="fab" part="FTDI-SMD-HEADER">
+      <footprints>
+        <fp>*1X06SMD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">FTDI-SMD-HEADER</field>
+        <field name="Footprint">fab_1X06SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="BiDi"/>
+        <pin num="2" name="CTS" type="BiDi"/>
+        <pin num="3" name="VCC" type="BiDi"/>
+        <pin num="4" name="TXD" type="BiDi"/>
+        <pin num="5" name="RXD" type="BiDi"/>
+        <pin num="6" name="RTS" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED">
+      <description>LED generic</description>
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="fab" part="RES-US1206FAB">
+      <footprints>
+        <fp>*R1206FAB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RES-US1206FAB</field>
+        <field name="Footprint">fab_R1206FAB</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Resonator">
+      <description>Three pin ceramic resonator</description>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Resonator</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="fab">
+      <uri>E:\Dropbox\jhc.design\proyectos\jhc.design\Fab Academy\descarte\week - 7 Design electorincs\libraries-master\libraries-master\kicad\fab.lib</uri>
+    </library>
+    <library logical="atmel">
+      <uri>C:\Program Files\KiCad\share\kicad\library\atmel.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="-5V">
+      <node ref="D1" pin="1"/>
+      <node ref="IC1" pin="14"/>
+      <node ref="U2" pin="6"/>
+      <node ref="S1" pin="3"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="M1" pin="6"/>
+    </net>
+    <net code="2" name="Net-(IC1-Pad2)">
+      <node ref="IC1" pin="2"/>
+      <node ref="Y1" pin="1"/>
+    </net>
+    <net code="3" name="Net-(IC1-Pad3)">
+      <node ref="Y1" pin="3"/>
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="4" name="Net-(R3-Pad2)">
+      <node ref="S1" pin="1"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="5" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="6" name="Net-(IC1-Pad4)">
+      <node ref="R2" pin="2"/>
+      <node ref="IC1" pin="4"/>
+    </net>
+    <net code="7" name="/MOSI">
+      <node ref="U2" pin="4"/>
+      <node ref="IC1" pin="7"/>
+    </net>
+    <net code="8" name="/MISO">
+      <node ref="U2" pin="1"/>
+      <node ref="IC1" pin="8"/>
+    </net>
+    <net code="9" name="/sck">
+      <node ref="U2" pin="3"/>
+      <node ref="IC1" pin="9"/>
+    </net>
+    <net code="10" name="/button">
+      <node ref="IC1" pin="10"/>
+    </net>
+    <net code="11" name="/rx">
+      <node ref="M1" pin="2"/>
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="12" name="/tx">
+      <node ref="IC1" pin="13"/>
+      <node ref="M1" pin="3"/>
+    </net>
+    <net code="13" name="/led">
+      <node ref="R1" pin="2"/>
+      <node ref="IC1" pin="6"/>
+    </net>
+    <net code="14" name="/rst">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="15" name="Net-(IC1-Pad11)">
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="16" name="Net-(IC1-Pad5)">
+      <node ref="IC1" pin="5"/>
+    </net>
+    <net code="17" name="Net-(S1-Pad4)">
+      <node ref="S1" pin="4"/>
+    </net>
+    <net code="18" name="Net-(S1-Pad2)">
+      <node ref="S1" pin="2"/>
+    </net>
+    <net code="19" name="/cts">
+      <node ref="M1" pin="5"/>
+    </net>
+    <net code="20" name="+5V">
+      <node ref="C1" pin="2"/>
+      <node ref="M1" pin="4"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="U2" pin="2"/>
+      <node ref="IC1" pin="1"/>
+    </net>
+    <net code="21" name="/rts">
+      <node ref="M1" pin="1"/>
+    </net>
+  </nets>
+</export>

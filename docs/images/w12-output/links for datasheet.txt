@@ -1,0 +1,10 @@
+(attiny 45 Datasheet)
+http://www.farnell.com/datasheets/1698186.pdf
+(RN4871 Datasheet bluetooth Low energy module )
+http://ww1.microchip.com/downloads/en/DeviceDoc/50002489C.pdf
+
+cedula   
+00
+0
+- 
+#1704182011

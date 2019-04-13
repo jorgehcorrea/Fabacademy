@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Embedded Programming</h1>
+									</header>
+									
+								<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>Group Assignment 	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>Compare the performance and development workflows for other architectures &#9744;</li>
+																	
+																</ul>
+																
+															<li><strong>Individual Assignment	&#9744;</strong></li>
+																<ul>
+																	<li>Read a microcontroller data sheet. &#9744;</li>
+																	<li>Program your board to do something, with as many different programming languages and programming environments as possible. &#9744;</li>
+																</ul>
+															
+																
+															<li><strong>To Conclude & Reflect</strong></li>
+															
+														</ul>
+														
+											</div>
+						<hr class="major" />
+									<h3>Group Assignment</h3>
+							<div class="row">
+							 
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w9-programing/1024px-AVR_group.jpg" alt="" />
+									<!--<ul>
+									<li>8-bit Atmel with 8KBytes </li>
+									<p>This is an 8 bit Microcontroller with RISC Arch, for 130 isntrcutins, with 2 clocks, with two sets of simultaneous instructions capability.  </p>
+									<li>ATxmega128A1</li>
+									<p>With memory that stays writen after there power has turned off. "non-volatile memory". Has Direct memory access, so at the time of using data from the memory it can bypass the CPU to speed up some operations. Supports External Interrupts, so maybe from an exteranl device directly makes the process brake. It can also be reset by the brown-out pin features, in order to always have a reliable ground 0 state to start from in important industrial operations.  </p>
+									<li>Atmel 0708 - ATtiny45</li>
+									<p>Oddly enough the atmel 0708 is a microcontroller we have already used, the ATtiny45. </p>
+									<p>The earlier description was only a small excersise where I read a bit more into the wikipedia found image. </p>
+									</ul>-->
+									</span>
+									<p>image from wikipedia: <a href="https://de.wikipedia.org/wiki/Microchip_AVR">Article Microchip AVR </a></p>
+								</div>	
+								<hr>
+								<div class="col-12 col-12-medium">
+									<p><strong>The different arcitectures</strong>
+										<ul>
+										<li>Harvard</li>
+										<p>If for example the architecture is a house, the harvard system has multiple rooms that send 
+										"people" to be adding room (CPU). But they always have to be simultaneously walking.  By having multiple "rooms" for "people" to walk between its more efficient but harder to organize.   </p>
+										<li>von Neumann</li>
+										<p>The von Neuman Architecture instead has 1 central room where all the people go in and out of. In this case people can be instruction people or outside data people, sharing the same room. Bu having one room its easier to organize "people" walking to and from "rooms" but it becomes less effective. </p>
+										<li>RISC</li>
+										<p>(Reduced instrIt closely resembles a command in a higher level language. For instance, if we let "a" represent the value of 2:3 and "b" represent the value of 5:2, then this command is iuctions set computing) In this case, the microcontrollers work in a much ridmic fashion. Where every instruction is broken down to sets of only 1 instructions and are operated acording to the internal timer. One instruction at a time. This tech emerged later than the CISC, because it brakes down instruction it performes in a better controlled time frame. <a href="https://www.azc.uam.mx/publicaciones/enlinea2/num1/1-2.htm"> Some very specific reference contrasting the tech with CISC</a>  </p>
+										<li>CISC</li>
+										<p>(Complex instruction set computers) Is a generation of microcontrollers or a specific architecture within that processes a higher level code into assembly by inately creating complex code lines in assembly that direct the information into the registery and later main memory. Creating little for the compiler to complile and organizing data into micro-size-specific degistable bits of code. <a href="https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/">Another source contrasting the RISC to CISC</a></p>
+										<li>Microprocessor</li>
+										<p>A microprocessor is an electornic compoent focuses only in computing operations. Another name might be a ALU and would be found inside a Microprocessor. Easy to get confused in the beguining, <strong>the microprocessor also does not</strong> contain any memory to work with or clocks or anything aside. </p>
+										<li>Microcontroller</li><p>The <strong> microcontroller does contain a microprosseor inside,</strong> as well as memory, possibly a clock, and imputs and outputs that work acoridng to all the components contained inside. 	</p>
+										<li>FPGA</li>
+										<p>(Field Programmable Gate arrays) semiconductors devices that connect via interconnects and work arround matric of data.</p>
+										<li>CPLD</li>
+										<p>(Compled programmable logic device) A logic device in between super customability (FPGA) and a very rigid device ment only for a specific process (PAL).</p>
+										<li>spatial</li>
+										<p>Int he context is how all the components intertwine in between one another? I found little to no reference of a specification in the realm of microcontrollers especifically.  </p>
+													
+										
+									</ul></p>
+									
+								</div>
+							</div>
+						<hr class="major" />
+									<h3>Individual Assignment</h3>
+									<h4>Read a microcontroller data sheet.</h4>
+							<div class="row">
+							 
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w9-programing/.jpg" alt="" /></span>
+								</div>	
+								<div class="col-12 col-12-medium">
+									<ul class="actions fit">
+														<li><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf" class="button primary fit" > Atmega 328p - Datasheet</a></li>
+													</ul>
+									<p></p>
+								</div>
+									<h4>Program your board to do something</h4>
+									<p>In this section we are going to program the isp boad done in week 5 and the pcb board done in week 7. In this case we will need the following. 
+									<ul>
+									<li>The FabISP Programmer board</li>
+									<li>6-Pin 2x3 Header connetor bet</li>
+									<li>The pbc board from week 7 (mutant fish pcb)</li>
+									<li>the FTDI Cable</li>
+									</ul>
+									</p>
+									
+									<h4>The easy way (arduino)</h4>
+								
+									<p>The first step was to understand what we actually had to create in oder to actually wirte, what to write inside the atmega microcontroller. We had to aquire 3 things:<br>
+									<ul>
+									<li>1. Aquire the fuses in order to properly configure the microprocessor</li>
+									<li>2. Find the Microcontroller's name to actually adress it in all future instructions through git. </li>
+									<li>3. Find the correct pins the pic is connected to from the schematic in order to adress it and program the atmel with them in mind. I decided to program i C and aduino cause I didnt really know how much harder it was. </li>
+									<li>Getting this things we are able to program the pcb to do something. Like blinking the light. </li>
+									</ul>
+									</p>
+
+									<p><strong>The fuses:</strong> I understood them as a gate keepers for certain rooms to enter inside the Atmega processor depending on what "guests" you might plann to invite into the microcontroller. So for example if Ill be using a 20 hz ozolator (Ext. Crystal Osc; frequency 8,0 - Mhz, start-up time PWEDWN/RESET: 258 CK/14CK + 4,1 ms;), and will require to reset the microcontorller at some point (un-check "BOOT REST")  </p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (7).jpg" alt="" />
+									</span>
+								</div>
+									
+								<p>The final Output we find under <strong>Current settings</strong> as hexadecimal digits. In this case:</p>
+								<br>
+								<ul>
+								<li>Low:0xE2</li>
+								<li>High:0xD9</li>
+								<li>Extended:0xFF</li>
+								</ul>
+								
+								<p>The above digits will prime the microcontroller to work in the way it should require. "open the correct doors"</p>
+								<p>Below Im entering the Hexa code fiuses in order to set the microcontroller up. We later upload this code into the microcontroller and later we actually the controller into doing what we need. </p>
+								
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (9).jpg" alt="" />
+									</span>
+								</div>
+								
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (14).jpg" alt="" />
+									</span>
+								</div>
+								<p>To find the Atmega 328p code to set up the .make file, we search the git with the following command: "avrdude -c attiny45 t" that is telling the microcontroller's current operating system to tell what are all the code equivalents devices it could read.. and we find Atmega328p = m328. We replace this code to the Attiny45 previous code. </p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (60).jpg" alt="" />
+									</span>
+								</div>
+								<h3>Insert part where everything was not cool and i had to redo de microprocessor pbc </h3>
+								<p>In order to find if everything works properly, I opeed git. And typed : avrdude -c attiny45 -p m328p</p>
+								<p>In this case I strugled because the behaviour of the git ansers where erratic, It started as: avrdude.exe: <br>"AVR device initialized and ready to accept instruction <br>
+								later it showed: "ardude.exe: initialization failed, rc=-1</p>
+								<p>I looked over the fuses, and got nothing wrong. I had forgot to copy the bootloader files inside the arduino directory. </p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (61).jpg" alt="" />
+									</span>
+								</div>
+								<a href="images/w9-programing/EduAtmega328P.rar" download>Find the zip file here</a>
+								<a href="http://fab.academany.org/2018/labs/fablabyachay/students/edgareduardo-cartagenaocampo/week8.html">I found the files from Edu</a>
+								
+								<p>After that It was still not working, and it was strange as everything seemed in order. I took some drastic measures and: 1. Re-installed the Arduino IED 2. Gave the Mutant fish a Bath in Alcohol (in case something might be messing the connections.) With close help of alex the ISP finally programed the Mutant PCB. </p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (61).jpg" alt="" />
+									</span>
+								</div>
+								
+								<p>As a result of this de-bugging the final program was finally working. </p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/W9-1.JPG" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+								 <iframe width="420" height="315"
+									src="images/w9-programing/blink.mp4">
+								</iframe> 
+								</div>
+								
+								<!--<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (22).jpg" alt="" />
+									</span>
+								</div>	
+								<p>This code would be ready to upload at this stage. </p>
+								<p>In this stage, I cheak the pcb and the pins against the data sheet>> just to sort of find out what is actually possible inside the pins currently connected. It is not the proper development stage to do this little detail but better late than never. </p>
+								<p></p>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (19).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (20).jpg" alt="" />
+									</span>
+								</div>	
+								
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (27).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (28).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (29).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (30).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (31).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (32).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (33).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (34).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (35).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (36).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (37).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (38).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (39).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (40).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (41).jpg" alt="" />
+									</span>
+								</div>	
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (42).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12">
+									<span class="image main"><img src="images/w9-programing/w9 (43).jpg" alt="" />
+									</span>
+								</div>
+								<div class="col-12 col-12-medium">
+									<span class="image main"><img src="images/w9-programing/w9 (1).jpg" alt="" />
+									</span>
+								</div> -->
+							</div>
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+									<p>This assignment became a dense acumulation of other prohjects before. I did have to recreate the pcb in order to complete this assignment. Part of the reason why I'm actually encompasing the Hello world pcb In the video. The excersie was vast and the final execution slim and simple. It is however a large pilar that later projects will sit on. I/o Is comming along and having a clear understanding for it is a crutial step.  </p>
+								</div>	
+								
+								
+								
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Jan 16: principles and practices</a></li>
+												<li><a href="assignment-2.html">Jan 23: project management</a></li>
+												<li><a href="assignment-3.html">Jan 30: computer-aided design</a></li>
+												<li><a href="assignment-4.html">Feb 06: computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Feb 13: electronics production</a></li> 
+												<li><a href="assignment-6.html">Feb 20: 3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Feb 27: electronic design</a></li> 
+												<li><a href="assignment-8.html">Mar 06: Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Mar: 13: embeded programming</a></li> 
+												<li><a href="assignment-10.html">Mar 20: casting and molding</a></li> 
+												<li><a href="assignment-11.html">Mar 27: input devices</a></li>
+												<li><a href="assignment-12.html">Apr 03: output devices</a></li>
+												<li><a href="assignment-13.html">Apr 10: applications and implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
