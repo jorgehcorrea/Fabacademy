@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fabacademy 15ht -Thing 1- JHC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Fabacademy</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.behance.net/jorgehernancorrea" class="icon fa-behance"><span class="label">Behance</span></a></li>
+										<li><a href="https://www.linkedin.com/in/jorge-correa-92697645/" class="icon fa-linkedin"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/mr.j_snap/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Networking and Communications</h1>
+									</header>
+									
+								<h2>Assignment List</h2>
+											<div class="col-12">
+													
+														<ul>
+															<li><strong>individual assignment`	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>design, build, and connect wired or wireless node(s) with network or bus addresses &#9744;</li>
+																	
+																	<li></li>
+																</ul>
+															<li><strong>group assignment`	&#9744;</strong></li> <!--&#9745; when done -->
+															
+																<ul>
+																	<li>send a message between two projects &#9744;</li>
+																	
+																	<li></li>
+																</ul>
+																	
+															
+																
+															<li><strong>To Conclude & Reflect</strong></li>
+															
+														</ul>
+														
+											</div>
+						<hr class="major" />
+									<h3></h3>
+							<div class="row">
+						
+								<div class="col-12 col-12-medium">
+								<ul>
+									<li>individual assignment`- design, build, and connect wired or wireless node(s) with network or bus addresses</li>
+									
+									<li>In this case I worked on a pcb, where an rn4871 bluetooth module was connected with a attiny 45.</li>
+									<li>I had to do a couple of itterations while troubleshooting. Aparently I had ignored the vat connection with the BT module. I had to Improvise, as creating the pcb all over from scratch was not an emediate option. </li>
+									<li>I paced to bridges between the outside of the pcb and the current outpuf of the 3.3v transformer. </li>
+									<li>I Initially followed the tutorial I found by <a href="http://www.martyncurrey.com/arduino-with-rn48701/">Marthy n currey</a>. It was one of the more complete tutorials to go though. </li>
+									<li>I downloaded a Bt scanner to my phone, while the pcb was working, and ment to find it and prove its functional. Unfortunately, In the office I found al least 8 different Bluetooth devices, and not a single had names, or was my pcb. After multiple attempst with: blt scanner and eBacon I decided to look at another option. </li>
+									<li>I found the <a herf="http://ww1.microchip.com/downloads/en/DeviceDoc/50002466B.pdf#M6.9.25598.Chapter.Chapter.2.Command.Description">users guide of the RN4871 chip</a>, but first I need to look at how I actually need to do in order to get the chip working. I found the user manual had tons of comands of the presumably language, but noting on how to get the info into the chip. </li>
+									<li>Looking over stundes of previous years, specifically from <a href="http://fab.academany.org/2018/labs/barcelona/students/joris-navarro/classes/14--networking-and-communications/">Barcelona</a> He points out of important tearms I should get aquinted with. </li>
+									<li>So Barcelona sends me to a <a href="https://devzone.nordicsemi.com/tutorials/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial">beguiners tutorial for bluetooth</a></li>
+									<li>The Generic Attribute Profile or GATT, I interpret is as a metho of packaging the instructions in order to use the product inside. And aparently will be heavy reading!</li>
+									<li>Service lookes like mini programs. And predefined services are already created to facilitate certain processes for developers. It would look like understanding and using this should be a must at this point. </li>
+									<li>Characteristics: is the area where the actual data exists. Other security and metadata about the informations aparently is also existant in this place.  </li>
+									<ul>'An analogy might be a storage room filled with filing cabinets and each filing cabinet has a number of drawers. The GATT profile in this analogy is the storage room. The cabinets are the services, and the drawers are characteristics holding various information. Some of the drawers might also have locks on them restricting the access to its information.' - Martin BL </ul>
+									<li>UUID : "t is a unique number used to identify services, characteristics and descriptors, also known as attributes. .. e.g. a peripheral can inform a central what services it provides "</li>
+									<li>The  short UUID 16-bit, 0x180D  vs the long 128-bit UUID that transmits so much more custom and detailed stuff. ps. its generated randomly and chances to have to exact long UUID is ~3e-39</li>
+									<li>Later looked into the actual pcb I had made, comparing it to the example Neil has and realized that My pcb did not account for FTDI Port. Hence all commands require to go directly to the ATtiny 45 and later pushed into the RN4871 module by a push of the button. As a result I landed on <a href="https://learn.sparkfun.com/tutorials/serial-communication/all">Serial communication description</a></li>
+									<li>I figure: "go through the user guide and find what the Attiny 45 needs in order to send a signal to another bluetooth, and hope it is not too long."</li>
+										<ul>
+											<li>Controller: </li>
+										</ul>
+									</li>
+								</ul>
+								</div>
+							</div>
+						<hr class="major" />
+									<h3>Main Title Stuff</h3>
+							<div class="row">
+							 
+								<div class="col-6 col-12-medium">
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+								</div>	
+								<div class="col-6 col-12-medium">
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+								</div>
+							</div>
+						<hr class="major" />
+								<h3>To Conclude</h3>
+							<div class="col-12 col-12-medium">
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+								</div>	
+								
+								
+								
+								</section>
+
+						</div>
+					</div>
+
+					<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="final-projects.html">Final Project</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li><a href="assignment-1.html">Principles and practices</a></li>
+												<li><a href="assignment-2.html">Project management</a></li>
+												<li><a href="assignment-3.html">Computer-aided design</a></li>
+												<li><a href="assignment-4.html">Computer-controlled cutting</a></li>
+												<li><a href="assignment-5.html">Electronics production</a></li> 
+												<li><a href="assignment-6.html">3D scanning and Priting</a></li> 
+												<li><a href="assignment-7.html">Electronic Design</a></li> 
+												<li><a href="assignment-8.html">Computer-Controlled Machining</a></li> 
+												<li><a href="assignment-9.html">Embeded Programming</a></li> 
+												<li><a href="assignment-10.html">Casting and Molding</a></li>
+												<li><a href="assignment-11.html">Input Device</a></li>
+												<li><a href="assignment-12.html">Output Device</a></li>
+												<li><a href="assignment-13.html">Applications and Implications</a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
