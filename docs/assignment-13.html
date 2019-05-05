@@ -59,23 +59,45 @@
 									<h3>Final Project</h3>
 							<div class="row">
 							 
-								<div class="col-6 col-12-medium">
+								<!--<div class="col-6 col-12-medium">
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-								</div>	
+								</div>	-->
 								<div class="col-12 col-12-medium">
 									<ul>
-									<li>What will it do?</li>
-									<tr>It will produce coffee at the que of a person seating on the chair in the morning.</tr>
-									<li>Who's done what beforehand?</li>
+									<li><strong>What will it do?</strong></li>
+									<td>It will produce coffee at the que of a person seating on the chair in the morning.</td>
+									<br>
+									<td>A deeper look into it, It will be composed of two different systems: </td><br>
+										<ul>
+										<strong>Chair System</strong>
+										<li>1.The first system will be embeded inside the chair.  It will have a simple swithc to detect if something is on it. It will will later turn on a capacitive sensor where it will determine if there is a person or if its something lese like books or a bag.</li>
+										<li>1.1 If its a person, it will make sure the time of day is morning, with an internal timer. It will also cheak if its the first time, if it is not it will do nothing. </li>
+										<li>1.2 If all is true, then it will send a signal via bluetooth to the output (the coffee maker pcb). </li>
+										<li>1.3 After sending the signal it will count the signal sent. In case the person sits again in the same time period it will not sent this again.</li>
+										<li>1.4 15 min afer the signal is sent the chair system will signal to the human that the coffee should be ready. (not sure by what means yet.)</li>
+								
+										</ul>
+										<ul>
+										<strong>Coffee System</strong>
+										<li>2. The system starts with a signal from the "Chair system" Where system 1 sends a signal via bluetooth to make coffee.</li>
+										<li>2.1 The system will in turn send a signal from the buetooth to the Attiny 45 to turn on the relay.</li>
+										<li>2.2 The Attiny will turn the relay with a 5v charge.</li>
+										<li>2.3 The Relay (already hacked into the coffee machine) will turn the drip coffee machine on. </li>
+										<li>2.4 The machine will take about 15 min to make coffee. </li>
+										</ul>
+									<li><strong>Who's done what beforehand?</strong></li>
 									<ul>
-									<li><a href="http://archive.fabacademy.org/archives/2016/fablabtrivandrum/students/376/finalproj.html">The cube -  An intetgrated tables, chair and light </a></li
+									<li><a href="http://archive.fabacademy.org/archives/2016/fablabtrivandrum/students/376/finalproj.html">The cube -  An intetgrated tables, chair and light </a></li>
 									<li><a href="https://commoncubes.wixsite.com/home"> Commin Cubes</a></li>
 									<li><a href="https://www.dezeen.com/2016/04/07/lift-bit-furniture-system-internet-of-things-carlo-ratti-for-vitra-milan-design-week-2016/"> Carlo Ratti's Iot Sofa</a></li>
-									<li><a href=""></a></li>
+									
 									</ul>
-									<li>What will you design?</li>
-									<li>What materials components will be used?</li>
+									<li><strong>What will you design?</strong></li>
+									<li>I will design the electronics behind both (The chair and coffee system) systems, and the chair. Currently I have a rocking chair that is operational and being finished. If time permits I would like to create another chair, But the main tasks will be to connect the chair with the coffe machine.</li>
+									<li><strong>What materials components will be used?</strong></li>
+									<li></li>
 									<li>Where will come from?</li>
+									<li>They will mostly be from the fab lab. </li>
 									<li>How much will they cost?</li>
 									<li>What part and systems will be made?</li>
 									<li>What processes will be used?</li>
