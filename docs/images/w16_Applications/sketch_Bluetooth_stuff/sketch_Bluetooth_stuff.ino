@@ -1,9 +1,10 @@
 #include <SoftwareSerial.h>
-SoftwareSerial BT(10, 11); // RX, TX  BLUE
+SoftwareSerial BT(PD0, PD1); // RX, TX  BLUE
 
 char dato;
 void setup() 
 {
+  /*
   BT.begin(38400); //VELOCIDAD DE COMUNICACION
   Serial.begin(9600); 
   pinMode(13,OUTPUT);
@@ -18,7 +19,7 @@ void setup()
   BT.println("AT+RESET");
   delay(1000);
   BT.begin(8600); 
-  
+  */
 }
 
 void loop() 
