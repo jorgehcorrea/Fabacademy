@@ -283,12 +283,12 @@
 															<img src="images/uploading.jpg" alt="" />
 															</span>
 												</div>
-
+<hr class="major">
 										<div class="row">
 										<h3>Git Workflow</h3>
 												<div class="col-12">
 												<p>Step 0 was actually finding a d downloading the git program to the computer. I did not understand what it actually was at first, I know think of it as little elf in th emachine that just executes code. It can run programs just as the machine does or did in the DOS, and now the cmd (windows) the only diference this is <strong>linux </strong> based. </p>
-												<p>You can access it <a href="https://git-scm.com/downloads"> GIT DOWNLOAD PAGE</a></p>
+												<p>You can access it <a href="https://git-scm.com/downloads"> Git Download Page</a></p>
 												<p>In order to mantain a proper work flow of git environment, I follow this steps:</p>
 												
 												</div>
@@ -296,6 +296,26 @@
 														<span class="image fit">
 															<img src="images/w2_/git workflow.png" alt="" />
 														</span>
+												</div>
+										</div>
+										<div class="row">
+												<hr class="major">
+										<h3>Git's ssh Key</h3>
+												<div class="col-12">
+												<p>It is recomended to have the ssh key as part of the git's proper security measures. I have opted not to do so as a result of my feeling of propensity to possibly loose the key and entironly loose access to the repo and pass the class. All the information ill be posting is not highly classified nor will it attract hackers most lightly.</p><p>If anything I hope it be used, copied and improved so.</p>
+												
+												<p>As for the process of creating a ssh key I would follow this steps</p>
+												<p><a href="https://gitlab.fabcloud.org/help/ssh/README#generating-a-new-ssh-key-pair">The steps are following the "generate a new SSH key pair"</a></p>
+												<p>And <a href="http://fabacademy.org/2019/labs/zoi/students/alejandra-granda/#w2gt">This Documentation by my classmate Ale</a> Who made a great and consice documentation of how to use the key's.</p>
+												<ul>
+													<li>1. Started by creating a private ssh: <br> ssh-keygen -t rsa -C "info@jhc.design" -b 4096</li>
+													<li>2. Later pressed enter = Saving the key (in txt file) in the default folder (c/users/dell/.ssh), and enter again = Leaving a blank space (no creating a password.. It is recomended to create a password)</li>
+													<li>3. Acordingly found the ssh key as "<a href="" download>id_rsa</a>" under: the c/users/dell/.ssh/ </li>
+													<li>4. To create a public key I Entered: "xclip -sel clip < ~/.ssh/id_rsa.pub" but had no result back. Aparently I had already attempted to create a public key </li>
+													<li>5. entered: "cat ~/.ssh/id_rsa.pub" and got back the public key: <br>ssh-rsa AAAAB3NzaC1yc2...iMv4f7AvEuDEY8CeucOQKWg1bYQ== info@jhc.design </li>
+													<li>6. After installing with the <strong>ssh key</strong> you tcan try it by by entering: ssh -T https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/zoi/students/john-dear.git  </li>
+													<li>7. If everything is possitive, it wil return: Welcome to GitLab</li>
+												</ul>
 												</div>
 										</div>
 
@@ -358,7 +378,7 @@
 														<dt>Brainstorming </dt>
 																<dd>
 																<p>Best option is Iot Furniture </p>
-																<p>I´ts still not sure exactly what will the final project be. I´ll be an desk chair, under the concept that jamming sensors into an object as intimate as work chair form an office will only get interesting results. I found nothing of the sort around, only an intelligent furniture made by  <a href="https://www.dezeen.com/2016/04/07/lift-bit-furniture-system-internet-of-things-carlo-ratti-for-vitra-milan-design-week-2016/">Carlo Ratti´s Lift Bit</a>. </p>
+																<p>It´s still not sure exactly what will the final project be. I´ll be an desk chair, under the concept that jamming sensors into an object as intimate as work chair form an office will only get interesting results. I found nothing of the sort around, only an intelligent furniture made by  <a href="https://www.dezeen.com/2016/04/07/lift-bit-furniture-system-internet-of-things-carlo-ratti-for-vitra-milan-design-week-2016/">Carlo Ratti´s Lift Bit</a>. </p>
 																
 																<p>Making an espresso shot after I sit down, or creating an announcement every time bad posture is occurring in order to spear some pain might be an interesting outcome to contemplate.  </p>
 														<dt> Thought Recap  </dt>
