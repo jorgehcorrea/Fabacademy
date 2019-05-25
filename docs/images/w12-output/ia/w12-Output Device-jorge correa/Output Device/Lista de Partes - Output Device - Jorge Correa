@@ -1,0 +1,22 @@
+Partlist
+
+Exported from rely pcb.brd at 2019-04-03 4:37 PM
+
+EAGLE Version 9.3.0 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value              Package              Library        Position (mil)        Orientation
+
+C1       CAP-US1206FAB      C1206FAB             fab            (300 860)             R0
+J1       TERM-1X02-ADAFRUIT 3.5MMTERM            fab            (300 190)             R0
+J2       TERM-1X02-ADAFRUIT 3.5MMTERM            fab            (300 1140)            R180
+K1       SRD-05VDC-SL-C     RELAY_SRD-05VDC-SL-C SRD-05VDC-SL-C (1750 940)            R0
+R1       10k                R1206FAB             fab            (1200 190)            R0
+R2       1k                 R1206FAB             fab            (1210 1210)           R90
+R3                          R1206FAB             fab            (300 690)             R0
+T1                          TO252                fab            (1600 290)            R270
+U$1      ATTINY45SI         SOIC8                fab            (1000 540)            R180
+U$2      AVRISPSMD          2X03SMD              fab            (750 1090)            R180
+U$3      LEDFAB1206         LED1206FAB           fab            (300 540)             R0
+U$4      TERM-1X03'-FABLAB' ED555DS-3DS          fab            (2400 940)            R90
