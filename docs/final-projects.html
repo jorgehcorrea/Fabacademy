@@ -113,6 +113,36 @@
 								<span class="image main"><img src="images/w8-cnc/me/final/a (25).JPG" alt="" /></span>
 								</div>
 							<p>In this week the final concept was developed, modifing it into a whimsical concept of a rocking chair. </p>
+							<p>I have not documented, but I did a finishig process between the final project</p>
+							<table style="width:100%">
+							<tr>
+								<th>Quantity</th>
+								<th>Component Description</th>
+							</tr>
+							<tr>
+								<th>.5 ltr </th>
+								<th>Brown wood stain: dyluted in paint thinner about 1:5 ratio. Applied before finishing</th>
+							</tr>
+							<tr>
+								<th>2/3 ltr</th>
+								<th>Linseed Oil</th>
+							</tr>
+							<tr>
+								<th>2/3 ltr</th>
+								<th>Paint Thinner</th>
+							</tr>
+							<tr>
+								<th>2/3 ltr</th>
+								<th>Water based Varnish</th>
+							</tr>
+							
+							</table>
+							<p>The Linseed oil, paint thinner and water based varnish where mixed. With this new mix 2 coats where applied with a 24hr window in between coats. </p>
+							<p> A final Sanding was applied with a 22 grit sandpaper. </p>
+							<p>The final result was like so: </p>
+							<div class="col-12">
+								<span class="image main"><img src="images/w21/IMG_5123.JPG" alt="" /></span>
+								</div>
 							<p align="center"><a href="assignment-3.html">look closer look at the protoype, cutting bits and all that good stuff </a></p>
 						<hr class="major" />
 						<h3 align="center">Electronic Design</h3>
@@ -140,29 +170,84 @@
 							</div>
 							<p>This case I was proving the concept that I can get the capacitive sensor work. </p>
 							<div class="col-12">
-								<video width="100%" controls><source src="images/w21/step-geroglificos.mp4" type="video/mp4" />
+								<video width="100%" controls><source src="images/w21/1.mp4" />
 								</video>
 								<p>Py GUI never got it working in my computer, I later decide to see see the reading though the arduino port. It was no recognizable. So I switched into the aruino's library. </p>
 							</div>	
 							<div class="col-12">
-								<video width="100%" controls><source src="images/w21/capacitive raw data.mp4" type="video/mp4" />
+							<span class="image main"><img src="images/w21/IMG_5193.JPG" alt="" /></span>
+							</div>
+							<div class="col-12">
+							<h5>Bill of Materials</h5>
+							<table style="width:100%">
+							<tr>
+								<th>Quantity</th>
+								<th>Component Description</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>Attiny 44</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>ftdi port 1x5, female</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>isp 2x3 pin port, male</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>2x2 pin port, male for power</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>button</th>
+							</tr>
+							<tr>
+								<th>3</th>
+								<th>0 ohm Resistance</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>10k ohm Resistance</th>
+							</tr>
+							
+							</table>
+							<p>In this case, at the debugging state and advised by Ale found some buggs in the pcb syste. 1. The vcc was not plugged in so we had to place a jumper cable. 2. The button was not poorly place in the system, so I removed the 10k resitor and connect the pin to gnd. </p>
+							</div>
+							<div class="row">
+							<div class="col-6">
+							<span class="image main"><img src="images/w21/input-paths.png" alt="" /></span>
+							</div>
+							<div class="col-6">
+							<span class="image main"><img src="images/w21/input-schematics.png" alt="" /></span>
+							</div>
+							</div>
+							
+							
+						<div class="col-12">
+								<video width="100%" controls><source src="images/w21/1.ogg" type="video/ogg" />
 								</video>
 								<p>Its all raw data from a 10k resistor, into the arduino. </p>
 							</div>	
 							<div class="col-12">
-								<video width="100%" controls><source src="images/w21/selecting the metal.mp4" type="video/mp4" />
+								<video width="100%" controls><source src="images/w21/2.ogg" type="video/ogg" />
 								</video>
-								<p>After a couple of tests about different materials, a flaten aluminum tray from  a lasangnia was the best choice.   </p>
+								<p>Its all raw data from a 10k resistor, into the arduino. </p>
+							</div>	
+							<div class="col-12">
+								<video width="100%" controls><source src="images/w21/3.ogg" type="video/ogg" />
+								</video>
+								<p>After a couple of tests about different materials, a flaten aluminum tray from  a lasagna was the best choice.   </p>
 							</div>
 							
 							<div class="col-12">
-								<video width="100%" controls><source src="images/w21/relay signal 1 or 0.mp4" type="video/mp4" />
+								<video width="100%" controls><source src="images/w21/4.ogg" type="video/ogg" />
 								</video>
 								<p>In this case After setting the parameters of how high sensibility a person is read in the sensor, it was time to standarize. Into a swich, 1 or 0, ON or OFF. </p>
 							</div>
-							<div class="col-12">
-								<span class="image main"><img src="images/w21/IMG_5258.jpg" alt="" /></span>
-							</div>
+							
 							<p>This was the original pcb Input based on a Attiny44. After the working code was developed, the microcontroller got 97% memory full and broke down.  </p>
 							<p>I decided to instead work with an earlier version of a pcb. With a bigger microcontroler: Atmega328p, from the Electronic Design week. </p>
 							<div class="col-12">
@@ -184,6 +269,25 @@
 							<p>I stray apart form the capacitive sensing library only to go back again to it and make the system work for it. </p>
 							<p align="center"><a href="assignment-11.html">The process behind the Input device </a></p>
 						<hr class="major" />
+							<h3 align="center"> Output Devices</h3>
+							<div class="col-6">
+								<span class="image main"><img src="images/w12-output/ia/w12-ia-11.jpg" alt="" /></span>
+								
+							</div>
+							<div class="col-6">
+							<span class="image main"><img src="images/w12-output/ia/w12-ia-0.jpg" alt="" /></span>
+							
+							</div>
+							<div class="">
+							<p>The week 12, I used a relay to acctuate the coffee machine to my bitting. In this case I swithced the machine ON and OFF with a timer set to the Attiny 44 microcontroller. </p>
+							</div>
+							<div class="col-12">
+								<video width="100%" controls><source src="images/w12-output/ia/w12-ia-15-ntsc.mp4" type="video/mp4" />
+								</video>
+								<p>Here I am testing this loop, prooving that I can control the machine this way but that the relay will not fry with the 8amps of current going through it.  </p>
+							</div>
+						
+						
 								<h3>To Conclude</h3>
 								
 								
