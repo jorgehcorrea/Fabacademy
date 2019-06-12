@@ -54,7 +54,7 @@
 														
 											</div>
 						<hr class="major" />
-						<video src="drinking_coffee.webm" width="100%"  autoplay muted loop >
+						<video src="drinking_coffee.ogg" width="100%"  autoplay muted loop >
 						</video> 
 						<hr class="major"/>
 									<h4>The initial proposal: </h4>
@@ -170,7 +170,7 @@
 							</div>
 							<p>This case I was proving the concept that I can get the capacitive sensor work. </p>
 							<div class="col-12">
-								<video width="100%" controls><source src="images/w21/1.mp4" />
+								<video width="100%" controls><source src="images/w21/1.ogg" type="video/ogg" />
 								</video>
 								<p>Py GUI never got it working in my computer, I later decide to see see the reading though the arduino port. It was no recognizable. So I switched into the aruino's library. </p>
 							</div>	
@@ -224,13 +224,7 @@
 							<span class="image main"><img src="images/w21/input-schematics.png" alt="" /></span>
 							</div>
 							</div>
-							
-							
-						<div class="col-12">
-								<video width="100%" controls><source src="images/w21/1.ogg" type="video/ogg" />
-								</video>
-								<p>Its all raw data from a 10k resistor, into the arduino. </p>
-							</div>	
+						
 							<div class="col-12">
 								<video width="100%" controls><source src="images/w21/2.ogg" type="video/ogg" />
 								</video>
@@ -271,11 +265,11 @@
 						<hr class="major" />
 							<h3 align="center"> Output Devices</h3>
 							<div class="col-6">
-								<span class="image main"><img src="images/w12-output/ia/w12-ia-11.jpg" alt="" /></span>
+								<span class="image main"><img src="images/w12-output/ia/w12-ia-11.JPG" alt="" /></span>
 								
 							</div>
 							<div class="col-6">
-							<span class="image main"><img src="images/w12-output/ia/w12-ia-0.jpg" alt="" /></span>
+							<span class="image main"><img src="images/w12-output/ia/w12-ia-0.JPG" alt="" /></span>
 							
 							</div>
 							<div class="">
@@ -286,7 +280,89 @@
 								</video>
 								<p>Here I am testing this loop, prooving that I can control the machine this way but that the relay will not fry with the 8amps of current going through it.  </p>
 							</div>
-						
+							<div class="col-12">
+							<video width="100%" controls>
+							<source src="images/w21/r.ogg" type="video/ogg" />
+							</video>
+								<p>This simple video shows the intended output pcb at work. In this case I am sending a 1 or a 0 through the serial port connection/ftdi. The end results in the realy clicking everytime the proper impulse is sent. </p>
+							</div>
+							<div class="col-12">
+							<span class="image main"><img src="images/w21/IMG_5220.jpg" alt="" /></span>
+							<p>Here is the actual pcb, again I was forced to to create a bridge or three as a result of missing connections. 1. In this case the Reset was not fully connected to the ISP pins. 2. The capacitor was not not connected to gnd 3. vcc was not connected to the RTC output for a clock integrated in the pcb.   </p>
+							</div>
+							<div class="col-12">
+							<h5>Bill of Materials</h5>
+							<table style="width:100%">
+							<tr>
+								<th>Quantity</th>
+								<th>Component Description</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>Atmega 328p</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>ftdi port 1x5, female</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>isp 2x3 pin port, male</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>1x5 pin port, male for RTC Clock Mdoule</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>button</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>Mosfit </th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>Relay 5V <120V / SRD 04VDC-SL-C </th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>screwable pin inputs for relay / 120 v connections to the coffe machine</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>1 uf capacitor</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>1 k resistor</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>10 k resistor</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>499 k resistor</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>0 k resistor</th>
+							</tr>
+							</table>
+							<p>In this case, at the debugging state and advised by Ale found some buggs in the pcb syste. 1. The vcc was not plugged in so we had to place a jumper cable. 2. The button was not poorly place in the system, so I removed the 10k resitor and connect the pin to gnd. </p>
+							<p align="center"><a href="assignment-11.html">The process behind the output device </a></p>
+							</div>
+							<div class="row">
+							<div class="col-6">
+							<span class="image main"><img src="images/w21/output-paths.png" alt="" /></span>
+							</div>
+							<div class="col-6">
+							<span class="image main"><img src="images/w21/output-schematics.png" alt="" /></span>
+							</div>
+							</div>
+						<hr class="major" />
+							<h3>Networking</h3>
 						
 								<h3>To Conclude</h3>
 								
