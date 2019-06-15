@@ -59,7 +59,92 @@
 						<video src="drinking_coffee.ogg" width="100%"  autoplay muted loop >
 						</video> 
 						<hr class="major"/>
-									<h4>The initial proposal: </h4>
+										<h3>What is the deadline? how much time do you have left?</h3>
+							
+							<table>
+							<tr>
+							<th>June 12: Final Project Presentation</th>
+							</tr>
+							<tr>
+							<th>June 19: Last date to submit for review in this cycle</th>
+							</tr>
+							<tr>
+							<th>June 26: Last date for feedback from review</th>
+							</tr>
+							<tr>
+							<th>July 3: last date to submit review feedback</th>
+							</tr>
+							<tr>
+							<th>June 10: last date for decision in this cycle</th>
+							</tr>
+							<tr>
+							<th>December 1: Restart cycle </th>
+							</tr>
+							</table>
+							
+							<hr class="major">
+							
+							<h3>What tasks have been completed, and what task remain?</h3>
+							<p>Task complited are: </p>
+							<table>
+							<tr>
+							<th>electornic production</th>
+							</tr>
+							<tr>
+							<th>3D scanning</th>
+							</tr>
+							<tr>
+							<th>Electornic Design</th>
+							</tr>
+							<tr>
+							<th>Computer controlled machining</th>
+							</tr>
+							<tr>
+							<th>embedded programing</th>
+							</tr>
+							<tr>
+							<th>Input Devices</th>
+							</tr>
+							<tr>
+							<th>Output Devices</th>
+							</tr>
+							<tr>
+							<th>Netweoking and communications</th>
+							</tr>
+							<tr>
+							<th>Wildcard Week</th>
+							</tr>
+							<tr>
+							<th>Invention, intelectual property </th>
+							</tr>
+							<tr>
+							<th>project development</th>
+							</tr>
+							<tr>
+							<th>Final Project</th>
+							</tr>
+							</table>
+							<h3>How will sI complete the remaining tasks in time?</h3>
+							
+							<p>I literally have no time left. My plan is to pull through with share will, and if I finish is because I had enough to beguin with.</p>
+							<p>I have not much time to plan, I will start myself from the later weeks and move up to earlier ones. </p>
+							<p>My instructor has advised me better than this with a proper plan, but I have not followed it at the end. More experiance comes more judgement im sure. 1 Assignments a day was his plan. Right now I have to do more like 6.  </p>
+							<h3>What has worked?</h3>
+							<p>Base on results, what has worked best is possible machine week. It was an assignment we started looking over it weeks in advance and we assigned each other specific and quantifiable results. </p>
+							<p>If I take what has worked, as that week and apply it to thre current state of things: Ill first revise what is required of me and later on expand on to what is a bonus. Ill keep track of it all through noeval.</p>
+							<h3>What has not worked?</h3>
+							<p>Doing the documentation after the actual week has finished is basically what mismached my entire schedual. </p>
+							<p>There has also been more than one things that has lead to a dead end and was not fully docmuented as its final conclution leads to nothing. Yet not mentioning could potentially make me make the same loop again. </p>
+							<p>Time based management has not worked in most cases in my procedure as in most scenarios the learing process takes more time than expected, until fully understood. </p>
+							<h3>What questions still needs to be answered? </h3>
+							<p>Q1: How to integrate the time into the coffee making system? </p>
+							<p>Q2: How long would the battery actually work inside the chair, and how to get it to constantly be charging in acordance to its limitations. </p>
+							<p>Q3: Can it be a reminder to consider the water/coffee setup? Idealy could that be automatized?</p>
+							
+							<h3>What have you learned?</h3>
+							<p>The most valuable leson learned from this experiance, asisde from the time management issue, is the accesibility that all the integration of "smart" sensors and ALU I actualy have at my disposal. With this the ability to agregate value to products and things arround me, in order to help and actuate acurate data. </p>
+							<p>Coffee production probably will never be fully dependent of somebody being sitted or not on a chair, but humans and the internet will have much intrest on sensing when and how humans are interacting with their environment in a quantifiable way: thats what I'll be taking with me. </p>
+							<hr class="major">
 							<div class="row" ">
 							 
 								<div class="col-4 col-12-medium">
@@ -451,6 +536,7 @@
 							</div>
 							</div>
 							<p>BOM:</p>
+							
 							<div>
 							<table>
 							<tr>
@@ -735,9 +821,8 @@ void loop()
 {
     //long start = millis();
     long total1 =  cs_4_2.capacitiveSensor(30);
-
-   
-//smothing code
+  
+//smothing code, by David A. Mellis  <dam@mellis.org>
   total = total - readings[readIndex];
   // read from the sensor:
   readings[readIndex] = total1;
@@ -745,7 +830,6 @@ void loop()
   total = total + readings[readIndex];   //readIndex variable to imput
   // advance to the next position in the array:
   readIndex = readIndex + 1;
-
   // if we're at the end of the array...
   if (readIndex >= numReadings) {
     // ...wrap around to the beginning:
@@ -757,7 +841,7 @@ void loop()
   // send it to the computer as ASCII digits
 
   
-//Serial.println(average);
+//Serial.println(average); //USE THIS TO CALIBRATE
 
 
   if (average > 50) 
@@ -768,43 +852,21 @@ void loop()
   {
     Serial.print('0'); //
   }
-
-
-    
-    //long total2 =  cs_4_6.capacitiveSensor(30);
-    //long total3 =  cs_4_8.capacitiveSensor(30);
-
-    //Serial.print(millis() - start);        // check on performance in milliseconds
-    //Serial.print("\t");                    // tab character for debug windown spacing
-
-   // Serial.println(average);                  // print sensor output 1
-    //Serial.print("\t");
-    //Serial.print(total2);                  // print sensor output 2
-    //Serial.print("\t");
-    //Serial.println(total3);                // print sensor output 3
-
-    delay(10);                             // arbitrary delay to limit data to serial port 
+    delay(10);  // arbitrary delay to limit data to serial port 
 }
-/*
- * CREDITS:
- * CapitiveSense Library Demo Sketch
- * Paul Badger 2008
- * Uses a high value resistor e.g. 10M between send pin and receive pin
- * Resistor effects sensitivity, experiment with values, 50K - 50M. Larger resistor values yield larger sensor values.
- * Receive pin is the sensor pin - try different amounts of foil/metal on this pin
- */
+/* * CREDITS: * CapitiveSense Library Demo Sketch * Paul Badger 2008 */ 
 							</code></pre>
 							</div>
 						</div>
+						
 							<h3>To Conclude</h3>
 							<p>Fun project, and increadibly fulfilling. Documenting what I actually did fully was important in order to develope on it further. </p>
-							<p></p>
+							
 						
-								
 								</section>
 
 
-						</div>
+						</div
 					</div>
 					<!-- Sidebar -->
 					<div id="sidebar">
@@ -848,7 +910,11 @@ void loop()
 					</div>
 
 			</div>
-
+			</div>
+			</div>
+			</div>
+			
+</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
