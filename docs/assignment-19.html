@@ -284,7 +284,7 @@
 							</div>
 							<div class="col-12">
 							<video width="100%" controls>
-							<source src="images/w21/r.ogg" type="video/ogg" />
+							<source src="images/w21/relay_sound.mp4" type="video/mp4" />
 							</video>
 								<p>This simple video shows the intended output pcb at work. In this case I am sending a 1 or a 0 through the serial port connection/ftdi. The end results in the realy clicking everytime the proper impulse is sent. </p>
 							</div>
@@ -360,7 +360,7 @@
 							<span class="image main"><img src="images/w21/output-paths.png" alt="" /></span>
 							</div>
 							<div class="col-6">
-							<span class="image main"><img src="images/w21/output-schematics.png" alt="" /></span>
+							<span class="image main"><img src="images/w21/output-schematics.PNG" alt="" /></span>
 							</div>
 							</div>
 						<hr class="major" />
@@ -370,10 +370,10 @@
 							<p><strong>Input PCB: (week 11)</strong></p>
 							<div class="row">
 							<div class="col-6">
-							<span class="image main"><img src="images/w11-input/input pcb.PNG" alt="" /></span>
+							<span class="image main"><img src="images/w11-input/input pcb.png" alt="" /></span>
 							</div>
 							<div class="col-6">
-							<span class="image main"><img src="images/W11-input/input schematics.PNG" alt="" /></span>
+							<span class="image main"><img src="images/W11-input/input schematics.png" alt="" /></span>
 							</div>
 							</div>
 							<p>BOM:</p>
@@ -444,10 +444,10 @@
 							<p>the bluetooth's vat was not connected, by this point I had already gotten good to create unplanned brdiges, so I used an un-used edge to do so. </p>
 							<div class="row">
 							<div class="col-6">
-							<span class="image main"><img src="images/w12-output/output_w_bt_schem.PNG" alt="" /></span>
+							<span class="image main"><img src="images/w12-output/output_w_bt_schem.png" alt="" /></span>
 							</div>
 							<div class="col-6">
-							<span class="image main"><img src="images/W12-output/output_w_bt_footprint.PNG" alt="" /></span>
+							<span class="image main"><img src="images/W12-output/output_w_bt_footprint.png" alt="" /></span>
 							</div>
 							</div>
 							<p>BOM:</p>
@@ -525,11 +525,117 @@
 							</ul>
 							
 							<p>Aparently one of the biggest points to take into consideration is that the module wont return a response on most commands, only ones specifically instructed to do so. </p>
-							<p>In order to actually program this bluetooth, it was the following steps</p>
+							<p>In order to actually program this bluetooth, it was the following steps:</p>
+							<table>
+							<tr>
+							<th>$$$+</th>
+							<th>Enter command mode</th>
+							</tr>
+							<tr>
+							<th>PZ</th>
+							<th>Clear all services</th>
+							</tr>
+							<tr>
+							<th>R,1</th>
+							<th>Reset module, take effect all the changes</th>
+							</tr>
+							</table>
+							<p>In order for it all to take effect, you are required to reset the bluetooth everytime. </p>
+							<p>I ended creating another pcb, this time the pcb offered for the class in the Networking week. </p>
+							<div class="row">
+							<div class="col-6">
+							<span class="image main"><img src="images/w14-networking/1 (1).JPG" alt="image of the pcb bluetooth rn4871"/> </span>
+							</div>
+							<div class="col-6">
+							<span class="image main"><img srC="images/w14-networking/1 (2).JPG" alt="image of the pcb bluetooth rn4871"/> </span>
+							</div>
+							</div>
+							<p>I never managed to move past this stage, So I switched to another system:<br> <strong>HC-05 Bluetooth module.</strong> </p>
 							
 							
 							
+							<h3>HC-05: The setup</h3>
+							<p>First make sure you have the hc-05 and not the hc-06, as the 06 is not able to become a master and so it required a 05 first. Physically diferenciated with a button on the buttom.</p>
+							<p>Before connecting the HC-05 you have to press and mantain the reset button, so the module enter command mode.</p>
+							<p>Once you have done so, Open the serial port, in this case arudino's port to communicate in the right 'com' port. </p>
+							<table>
+							<tr>
+							<th>38400</th>
+							<th>Baud Rate </th>
+							</tr>
+							<tr>
+							<th>Carriage Return</th>
+							<th>Set</th>
+							</tr>
+							<tr>
+							<th>AT</th>
+							<th>Response= OK // Cheak if you are connected</th>
+							</tr>
+							<tr>
+							<th>AT+RESET</th>
+							<th>Response= ok // In order for anything to take place</th>
+							</tr>
+							<tr>
+							<th>AT+UART=9600, 0,0 </th>
+							<th>Change the band rate into a certain number </th>
+							</tr>
+							<tr>
+							<th>AT+UART=9600, 0,0 </th>
+							<th>Change the band rate into a certain number </th>
+							</tr>
+							<tr>
+							<th>AT+NAME=S-C BT M </th>
+							<th>//sets the bt name (Master or slave ) </th>
+							</tr>
+							<tr>
+							<th>AT+ROLE=0  /* OR */ AT+ROLE=1</th>
+							<th>//Slave or Master</th>
+							</tr>
+							<tr>
+							<th>AT+CMODE=1</th>
+							<th>//"enables the search for available devices"-Danny Vallejo</th>
+							</tr>
+							<tr>
+							<th>AT+PSWD=1122</th>
+							<th>//Sets password</th>
+							</tr>
+							<tr>
+							<th>AT+RESET</th>
+							<th> // Resets the module and makes the changes active</th>
+							</tr>
+							</table>
+							<p>The setup, FTDI & HC-05</p>
+							<div class="col-12">
+							<video width="100%" controls>
+							<source src="images/w21/bt_connection.ogg" type="video/ogg" />
+							</video>
+							</div>
+							<p>HC-05 & HC-05</p>
+							<p>It is required to setup one HC-05 as a Master, and one as Slave.</p>
+							<div class="col-12">
+							<video width="100%" controls>
+							<source src="images/w21/bt-com-pcb-final.ogg" type="video/ogg" />
+							</video>
+							</div>	
+								
+							<p>Once I actually got them sync, I could actually transfer data between them. </p>
+							<p>I later opened two diferent terminals: Arduino & Terminte 3.4 (due to its ease of installation and light weight)</p>
+							<div class="col-6">
+							<span class="image main"><img srC="images/W21/1.PNG" alt="Conneciton between HC-05 "/> </span>
+							</div>	
+							<h4>Communication:</h4>
+							<table>
+							<tr>
+							<th>HOLA</th>
+							</tr>
+							<tr>
+							<th>SIII</th>
+							</tr>
+							</table>
+							
+							<hr class="major">
 							<h3>To Conclude</h3>
+							<p></p>
 						
 								
 								</section>
