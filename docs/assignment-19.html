@@ -528,74 +528,74 @@
 							<p><strong>Debugging:</strong></p>
 							<p>the bluetooth's vat was not connected, by this point I had already gotten good to create unplanned brdiges, so I used an un-used edge to do so. </p>
 							<div class="row">
-							<div class="col-6">
-							<span class="image main"><img src="images/w12-output/output_w_bt_schem.png" alt="" /></span>
-							</div>
-							<div class="col-6">
-							<span class="image main"><img src="images/W12-output/output_w_bt_footprint.png" alt="" /></span>
-							</div>
+								<div class="col-6">
+								<span class="image main"><img src="images/w12-output/output_w_bt_schem.png" alt="" /></span>
+								</div>
+								<div class="col-6">
+								<span class="image main"><img src="images/W12-output/output_w_bt_footprint.png" alt="" /></span>
+								</div>
 							</div>
 							<p>BOM:</p>
 							
 							<div>
-							<table>
-							<tr>
-							<th>Quantity</th>
-							<th>Component</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>Attiny 44</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>RN4871 Bluetooth module</th>
-							</tr>
-							<tr>
-							<th>2</th>
-							<th>LED Light SMD</th>
-							</tr>
-							<tr>
-							<th>2</th>
-							<th>Capacitior 1 uf</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>2x3 pin ISP connector, male</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>2x2 pin connector, male</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>330 ohm Resistance</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>10k ohm Resistance</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>0 ohm Resistance</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>3.3 v IC</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>4.7 k Resistance</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>Relay 5v < 120v "SRD-05VDC-SL-C"</th>
-							</tr>
-							<tr>
-							<th>1</th>
-							<th>Mosfit "NMOSFETTO252" </th>
-							</tr>
-							</table>
+								<table>
+								<tr>
+								<th>Quantity</th>
+								<th>Component</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>Attiny 44</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>RN4871 Bluetooth module</th>
+								</tr>
+								<tr>
+								<th>2</th>
+								<th>LED Light SMD</th>
+								</tr>
+								<tr>
+								<th>2</th>
+								<th>Capacitior 1 uf</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>2x3 pin ISP connector, male</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>2x2 pin connector, male</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>330 ohm Resistance</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>10k ohm Resistance</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>0 ohm Resistance</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>3.3 v IC</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>4.7 k Resistance</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>Relay 5v < 120v "SRD-05VDC-SL-C"</th>
+								</tr>
+								<tr>
+								<th>1</th>
+								<th>Mosfit "NMOSFETTO252" </th>
+								</tr>
+								</table>
 							</div>
 							
 															
@@ -745,116 +745,116 @@
 							</div>
 						</div>
 						<h3>Final project development</h3>
-						<p>In this stage, all the componets where already working in their own space, and had to bring them all toghether. </p>
-						<p>The constructive aspect of it, was already worked arround, in this case it became the code joining both pcb's.</p>
+						<p>In this stage, all the components where already working in their own space, and had to bring them all together. </p>
+						<p>The constructive aspect of it, was already worked around, in this case it became the code joining both pcb's.</p>
 						<div class="row">
 						<div class="col-6">
 							<span class="image main"><img srC="images/w21/IMG_5220.JPG" alt="WILDCARD WEEK"/> </span>
 							<p>For the output:
 							<pre><code>
-// Relay pin is controlled with D8. The active wire is connected to Normally Closed and common
-int relay = 2;
-volatile byte estado = LOW;
+	// Relay pin is controlled with D8. The active wire is connected to Normally Closed and common
+	int relay = 2;
+	volatile byte estado = LOW;
 
-char incomingByte = 0; 
+	char incomingByte = 0; 
 
-// Timer Variables
-long lastDebounceTime = 0;  
-long debounceDelay = 10000;
+	// Timer Variables
+	long lastDebounceTime = 0;  
+	long debounceDelay = 10000;
 
-void setup() {
-  // Pin for relay module set as output
-  pinMode(relay, OUTPUT);
-  digitalWrite(relay, LOW);
-  // PIR motion sensor set as an input
-  // Triggers detectMotion function on rising mode to turn the relay on, if the condition is met
-  // Serial communication for debugging purposes
-  Serial.begin(9600);
-}
+	void setup() {
+	  // Pin for relay module set as output
+	  pinMode(relay, OUTPUT);
+	  digitalWrite(relay, LOW);
+	  // PIR motion sensor set as an input
+	  // Triggers detectMotion function on rising mode to turn the relay on, if the condition is met
+	  // Serial communication for debugging purposes
+	  Serial.begin(9600);
+	}
 
-void loop() {
+	void loop() {
 
- if (Serial.available() > 0) {
-incomingByte = Serial.read(); // read the incoming byte:
-Serial.print(incomingByte);
+	 if (Serial.available() > 0) {
+	incomingByte = Serial.read(); // read the incoming byte:
+	Serial.print(incomingByte);
 
-if ((incomingByte)  == '1'){
-digitalWrite(relay, HIGH);
-   // Serial.println("ON");
-  }
-else {
-  digitalWrite(relay, LOW);
-//   Serial.println("OFF");
-  }
-}
- delay(10);
-  
- }
- 
- //  CREDITS: Rui Santos: Complete project details at https://randomnerdtutorials.com  
+	if ((incomingByte)  == '1'){
+	digitalWrite(relay, HIGH);
+	   // Serial.println("ON");
+	  }
+	else {
+	  digitalWrite(relay, LOW);
+	//   Serial.println("OFF");
+	  }
+	}
+	 delay(10);
+	  
+	 }
+	 
+	 //  CREDITS: Rui Santos: Complete project details at https://randomnerdtutorials.com  
 							</code></pre>
 							</div>
 							<div class="col-6">
 							<span class="image main"><img srC="images/W21/IMG_5235.JPG" alt="WILDCARD WEEK"/> </span>
 							<p>For the input:
-							<pre><code>
-#include <CapacitiveSensor.h>
+								<pre><code>
+	#include <CapacitiveSensor.h>
 
-CapacitiveSensor   cs_4_2 = CapacitiveSensor(13,11);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
-const int numReadings = 10;
+	CapacitiveSensor   cs_4_2 = CapacitiveSensor(13,11);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
+	const int numReadings = 10;
 
-int readings[numReadings];      // the readings from the analog input
-int readIndex = 0;              // the index of the current reading
-int total = 0;                  // the running total
-int average = 0;                // the average
+	int readings[numReadings];      // the readings from the analog input
+	int readIndex = 0;              // the index of the current reading
+	int total = 0;                  // the running total
+	int average = 0;                // the average
 
-void setup()                    
-{
-   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
-   Serial.begin(9600);
-   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
-    readings[thisReading] = 0;
-  }
-}
+	void setup()                    
+	{
+	   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
+	   Serial.begin(9600);
+	   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
+		readings[thisReading] = 0;
+	  }
+	}
 
-void loop()                    
-{
-    //long start = millis();
-    long total1 =  cs_4_2.capacitiveSensor(30);
-  
-//smothing code, by David A. Mellis  <dam@mellis.org>
-  total = total - readings[readIndex];
-  // read from the sensor:
-  readings[readIndex] = total1;
-  // add the reading to the total:
-  total = total + readings[readIndex];   //readIndex variable to imput
-  // advance to the next position in the array:
-  readIndex = readIndex + 1;
-  // if we're at the end of the array...
-  if (readIndex >= numReadings) {
-    // ...wrap around to the beginning:
-    readIndex = 0;
-  }
+	void loop()                    
+	{
+		//long start = millis();
+		long total1 =  cs_4_2.capacitiveSensor(30);
+	  
+	//smothing code, by David A. Mellis  <dam@mellis.org>
+	  total = total - readings[readIndex];
+	  // read from the sensor:
+	  readings[readIndex] = total1;
+	  // add the reading to the total:
+	  total = total + readings[readIndex];   //readIndex variable to imput
+	  // advance to the next position in the array:
+	  readIndex = readIndex + 1;
+	  // if we're at the end of the array...
+	  if (readIndex >= numReadings) {
+		// ...wrap around to the beginning:
+		readIndex = 0;
+	  }
 
-  // calculate the average:
-  average = total / numReadings;
-  // send it to the computer as ASCII digits
+	  // calculate the average:
+	  average = total / numReadings;
+	  // send it to the computer as ASCII digits
 
-  
-//Serial.println(average); //USE THIS TO CALIBRATE
+	  
+	//Serial.println(average); //USE THIS TO CALIBRATE
 
 
-  if (average > 50) 
-  {
-    Serial.print('1'); // ln solo para humanos
-  } 
-  else
-  {
-    Serial.print('0'); //
-  }
-    delay(10);  // arbitrary delay to limit data to serial port 
-}
-/* * CREDITS: * CapitiveSense Library Demo Sketch * Paul Badger 2008 */ 
+	  if (average > 50) 
+	  {
+		Serial.print('1'); // ln solo para humanos
+	  } 
+	  else
+	  {
+		Serial.print('0'); //
+	  }
+		delay(10);  // arbitrary delay to limit data to serial port 
+	}
+	/* * CREDITS: * CapitiveSense Library Demo Sketch * Paul Badger 2008 */ 
 							</code></pre>
 							</div>
 						</div>
@@ -910,10 +910,7 @@ void loop()
 					</div>
 
 			</div>
-			</div>
-			</div>
-			</div>
-			
+						
 </div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
