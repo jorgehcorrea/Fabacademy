@@ -71,20 +71,17 @@
 									<span class="image main"><img src="images/w16_Applications/diagram.jpg" alt="Concept: Phone Connecting to a HC-05 Bluetooth Module, power by a pcb board with a led to be turned on. " /></span>
 								</div>	
 								<div class="col-12 col-12-medium">
-									
-
-<p> For the individual assignment we defined that the interface would be done with <strong> MIT app Inventor </strong> in combination with a bluetooth input/ output device. </p>
-<p>The componets:
-<ul>
-<li>Phone (android)</li>
-<li>HC-05 Bluetooth Module</li>
-<li>PCB Board (Mutant fish board)</li>
-</ul>
-
-</p>
-
-<p>I was surprised with the ease with which the front end system could be created.  For exercise sake I decided to create a gif out of the process, partly as a excersise to create a gif and partly because actually uploading the complete images makes for a content less essay. </p>
-</div>
+										<p> For the individual assignment we defined that the interface would be done with <strong> MIT app Inventor </strong> in combination with a bluetooth input/ output device. </p>
+										<p>The componets:
+										<ul>
+										<li>Phone (android)</li>
+										<li>HC-05 Bluetooth Module</li>
+										<li>PCB Board (Mutant fish board)</li>
+										</ul>
+										</p>
+										<p>I was surprised with the ease with which the front end system could be created.  For exercise sake I decided to create a gif out of the process, partly as a excersise to create a gif and partly because actually uploading the complete images makes for a content less essay. </p>
+								</div>
+							</div>
 <hr class="major">
 <h3>Getting to know the mit app inventor</h3>
 
@@ -245,92 +242,96 @@
 </div>
 
 </div>
-<div class="row">
-<div class="col-12">
-<h6>The process to follow: </h6><br>
-<h6>
-1. open screen @ mit.edu app inventor <br>
-2. find bluetooth <br>
-3. add bluetooht (hidden component)<br>
-4. add 2 buttons<br>
-5. change text<br>
-6. format the alignment<br>
-7. format button height to "fill parent"<br>
-8. format result<br>
-9. change colors acordingly<br>
-10. Add a button that says "connec to bluetooth"<br>
+		<div class="row">
+			<div class="col-12">
+			<h6>The process to follow: </h6><br>
+			<h6>
+			1. open screen @ mit.edu app inventor <br>
+			2. find bluetooth <br>
+			3. add bluetooht (hidden component)<br>
+			4. add 2 buttons<br>
+			5. change text<br>
+			6. format the alignment<br>
+			7. format button height to "fill parent"<br>
+			8. format result<br>
+			9. change colors acordingly<br>
+			10. Add a button that says "connec to bluetooth"<br>
 
-11. select the "Designer" button icon to go into the programming by block section of app inventor / select the buttons on the left side (object tree)<br>
-12. select a when statement (On button)<br>
-13. drop the selected statement<br>
-14. select bluetooth client / select when statement<br>
-15. drop bluetooth client statement <br>
-16. move bluetooth client statement INTO when statement (On button)<br>
-17. select under built-in "Text"<br>
-18. drop INTO bluetooth client **at this point I was planning to use the rn4871 module ($$$ = activate command mode)<br>
-19. insert "1" for simplicity<br>
-20. do the same process for the Off Button <br>
-21. insert "0" in the text box (Off button)<br>
-22. change the rn4871 module.. if you want<br>
-23. select listpicker1 / insert 'when "listpicker1" BeforePicking do' statement<br>
-24. Insert logic 'set "listpicker1" elemnts to" statement / Also insert 'when "listpicker" after picking do' statement<br>
-25. sleect bluetooth module / select 'set "rn4871" selection' / drop INTO when ... afterpicking do statement<br>
+			11. select the "Designer" button icon to go into the programming by block section of app inventor / select the buttons on the left side (object tree)<br>
+			12. select a when statement (On button)<br>
+			13. drop the selected statement<br>
+			14. select bluetooth client / select when statement<br>
+			15. drop bluetooth client statement <br>
+			16. move bluetooth client statement INTO when statement (On button)<br>
+			17. select under built-in "Text"<br>
+			18. drop INTO bluetooth client **at this point I was planning to use the rn4871 module ($$$ = activate command mode)<br>
+			19. insert "1" for simplicity<br>
+			20. do the same process for the Off Button <br>
+			21. insert "0" in the text box (Off button)<br>
+			22. change the rn4871 module.. if you want<br>
+			23. select listpicker1 / insert 'when "listpicker1" BeforePicking do' statement<br>
+			24. Insert logic 'set "listpicker1" elemnts to" statement / Also insert 'when "listpicker" after picking do' statement<br>
+			25. sleect bluetooth module / select 'set "rn4871" selection' / drop INTO when ... afterpicking do statement<br>
 
-26. right-click on 'set "listpicker1"..' and change it to selection *you can manipulate modules this way as well.. <br>
-27. add 'call "rn4871" connect' block<br>
-28. add lstpicker1 selection<br>
-29. here is some more logic option to use<br>
-30. here are some math comparisons<br>
-31. export the app this way!! IMPORTANT!<br>
-</h6>
-</div>
-</div>
+			26. right-click on 'set "listpicker1"..' and change it to selection *you can manipulate modules this way as well.. <br>
+			27. add 'call "rn4871" connect' block<br>
+			28. add lstpicker1 selection<br>
+			29. here is some more logic option to use<br>
+			30. here are some math comparisons<br>
+			31. export the app this way!! IMPORTANT!<br>
+			</h6>
+			</div>
+		</div>
+	<hr>
+	<div class="col-12 ">
+		<p> In the end we had a .apk file for uploading into the phone. </p>
+
+		<p>It all sounded too good to be true, and so it was when we realized I had a iPhone and the application is not existent as it is on android &quot;playstore&quot;.  Apparently there is a movement, development where the Mit app inventor app launching and as we speak on the beta phase. In order to access it however I required to fill in a formulae and be considered an option for the testing. Maybe they will find a amateur developer as an interesting focuse group? </p>
+
+		<p>So a quick search in google showed other options to actually work with iPhone.  I later attempted to make it work with a similar application on the web called: <strong>Thunkable</strong></p>
+		<div class="col-12 ">
+		<span class="image main"><img src="images/w16_Applications/thunkable.png" alt="Playing arround with Thnukable app development environment" /></span>
+		</div>
+		<p>  Only to find that the system did not have a direct Bluetooth support. Because i will be using Bluetooth, in the entirety and have thought that it will be an integral part of the fab project, I require to figure out how to use it. That was enough to make me searching again for another app developer, preferably in blocks. Reviewing the Thunkable Platform, it was very similar to the MIT app inventor. Almost as if it was the same thing, with the added note of some textures and a few changed options, as was the Bluetooth one. At least its connectivity option was not offering Bluetooth. </p>
+
+		<p>Later found <strong>AppyBuilder</strong>, an app building system that d id support Bluetooth, and started hacking away at it. </p>
+		<div class="col-12 ">
+		<span class="image main"><img src="images/w16_Applications/appystore.png" alt="playing arround with appybuilder app development environment" /></span>
+		</div>
+		<p>Again a super similar feeling, that I thought it might be a bit to easy to work it out. Hence I thought maybe a bit more reaserch on how to add it into the iphone would work. </p>
+
+		<p></p>
+
+		<p>Apparently I have to download xcode, for the iPhone. Looking for it in the app store was only downloading tutorials.</p>
+
+
+
+		<p> It was not downloading the actual app. A forum later attributed to downloading mac store, and so I did but another search revealed there is nothing to work with. </p>
+
+		<p>Maybe because I am in Ecuador, as the appstore it wont just let me download the app?. After some reaserch I can sign in under: <a href="https://developer.apple.com/"> https://developer.apple.com/ </a> but by the time I figured this out it was much to late to actually learn "their way" of coding stuff. </p>
+
+
+		<p>In the end I figure It might be best to just use the android platform. So I will use that instead.  </p>
+		<p>So I did, I used a borrowed android in order to upload an app. </p>
+
+			<div class="col-6">
+				 <video controls>
+				  <source src="images/w16_Applications/app working.mp4" type="video/mp4">
+				  
+				</video> 
+
+				<p>The anoying white cable was actually just charging the phone. In highnsite, I should have not shown it as part of the video, as it is confusing. </p>
+
+			</div>
+	<ul class="actions fit">
+			<li><a href="images/w16_Applications/bt_app_with_mutant_fish/bt_app_with_mutant_fish.ino" class="button primary fit" download> Download Arduino Code</a></li>
+	</ul>
+	<ul class="actions fit">
+			<li><a href="images/w16_Applications/app1-Jorge's_simple_BT_app.apk" class="button primary fit" download> Download the Bluetooth app</a></li>
+	</ul>
 	
-<div class="col-8 ">
-<p> In the end we had a .apk file for uploading into the phone. </p>
-
-<p>It all sounded too good to be true, and so it was when we realized I had a iPhone and the application is not existent as it is on android &quot;playstore&quot;.  Apparently there is a movement, development where the Mit app inventor app launching and as we speak on the beta phase. In order to access it however I required to fill in a formulae and be considered an option for the testing. Maybe they will find a amateur developer as an interesting focuse group? </p>
-
-<p>So a quick search in google showed other options to actually work with iPhone.  I later attempted to make it work with a similar application on the web called: <strong>Thunkable</strong></p>
-<div class="col-12 ">
-<span class="image main"><img src="images/w16_Applications/thunkable.png" alt="Playing arround with Thnukable app development environment" /></span>
-</div>
-<p>  Only to find that the system did not have a direct Bluetooth support. Because i will be using Bluetooth, in the entirety and have thought that it will be an integral part of the fab project, I require to figure out how to use it. That was enough to make me searching again for another app developer, preferably in blocks. Reviewing the Thunkable Platform, it was very similar to the MIT app inventor. Almost as if it was the same thing, with the added note of some textures and a few changed options, as was the Bluetooth one. At least its connectivity option was not offering Bluetooth. </p>
-
-<p>Later found <strong>AppyBuilder</strong>, an app building system that d id support Bluetooth, and started hacking away at it. </p>
-<div class="col-12 ">
-<span class="image main"><img src="images/w16_Applications/appystore.png" alt="playing arround with appybuilder app development environment" /></span>
-</div>
-<p>Again a super similar feeling, that I thought it might be a bit to easy to work it out. Hence I thought maybe a bit more reaserch on how to add it into the iphone would work. </p>
-
-<p></p>
-
-<p>Apparently I have to download xcode, for the iPhone. Looking for it in the app store was only downloading tutorials.</p>
-
-
-
-<p> It was not downloading the actual app. A forum later attributed to downloading mac store, and so I did but another search revealed there is nothing to work with. </p>
-
-<p>Maybe because I am in Ecuador, as the appstore it wont just let me download the app?. After some reaserch I can sign in under: <a href="https://developer.apple.com/"> https://developer.apple.com/ </a> but by the time I figured this out it was much to late to actually learn "their way" of coding stuff. </p>
-
-
-<p>In the end I figure It might be best to just use the android platform. So I will use that instead.  </p>
-<p>So I did, I used a borrowed android in order to upload an app. </p>
-<p></p>
-<div class="col-6">
- <video controls>
-  <source src="images/w16_Applications/app working.mp4" type="video/mp4">
-  
-</video> 
-
-<p>The anoying white cable was actually just charging the phone. In highnsite, I should have not shown it as part of the video, as it is confusing. </p>
-
-</div>
-<ul class="actions fit">
-														<li><a href="images/w16_Applications/bt_app_with_mutant_fish/bt_app_with_mutant_fish.ino" class="button primary fit" download> Download Arduino Code</a></li>
-													</ul>
 								</div>
-							</div>
+							
 						<hr class="major" />
 								<h3>To Conclude</h3>
 							<div class="col-12 col-12-medium">
