@@ -1,0 +1,35 @@
+2. open screen @ mit.edu app inventor
+3. find bluetooth 
+4. add bluetooht (hidden component)
+5. add 2 buttons
+6. change text
+7. format the alignment
+9. format button height to "fill parent"
+10. format result
+12. change colors acordingly
+13. Add a button that says "connec to bluetooth"
+14. 
+15. select the "Designer" button icon to go into the programming by block section of app inventor / select the buttons on the left side (object tree)
+16. select a when statement (On button)
+17. drop the selected statement
+18. select bluetooth client / select when statement
+19. drop bluetooth client statement 
+20. move bluetooth client statement INTO when statement (On button)
+21. select under built-in "Text"
+22. drop INTO bluetooth client **at this point I was planning to use the rn4871 module ($$$ = activate command mode)
+23. insert "1" for simplicity
+24. do the same process for the Off Button 
+25. insert "0" in the text box (Off button)
+26. change the rn4871 module.. if you want
+27. select listpicker1 / insert 'when "listpicker1" BeforePicking do' statement
+28. Insert logic 'set "listpicker1" elemnts to" statement / Also insert 'when "listpicker" after picking do' statement
+29. sleect bluetooth module / select 'set "rn4871" selection' / drop INTO when ... afterpicking do statement
+30. 
+31. right-click on 'set "listpicker1"..' and change it to selection *you can manipulate modules this way as well.. 
+32. add 'call "rn4871" connect' block
+33. add lstpicker1 selection
+34. here is some more logic option to use
+35. here are some math comparisons
+36. export the app this way!! IMPORTANT!
+
+
