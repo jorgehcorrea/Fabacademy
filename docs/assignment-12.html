@@ -191,12 +191,21 @@
 										<li><a href="imagesimages/w12-output/ia/w12-Output Device w Bluetooth-Jorge Correa.zip" class="button primary fit" download> Compressed files corrected. Relay output pcb with out bluetooth. </a></li>		
 									</ul>
 							</div>
+							<div class="col-12">
+							<h3>the protocol and system used to program</h3>
+							<p>One procedure that enables the fabacademy to work so rapidly is the method of programing the microcontroller. In this case every programing done is in system. Through the ISP header. </p>
+							<span class="image main"><img src="images/w12-output/isp_header.png" alt="" /></span>
+							<p>I'll use the 6-pin AVR ISP header. </p>
+							<p>It is also good to note that the 6-pin head is not connected directly to the computer, but its communication works as follows:</p>
+							<span class="image main"><img src="images/w12-output/Icsp_communication.jpg" alt="" /></span>
+							<p>The memntioned is the programming protocol I use to program in this case. </p>
+							</div>
 							
 							<div class="col-12"><!-- the code -->
 									<p>Inside the attiny 88, was a simple code telling it to turn on and off every 5 seconds. Just to test the realy out. I supriseingly was enough to make "warm" coffee. </p>
 <pre><code>
 
-<#include 'avr/io.h'
+#include 'avr/io.h'
 #include 'util/delay.h'
 
 
