@@ -3459,6 +3459,7 @@ input, select, textarea {
 		}
 
 			#banner .image img {
+				image-orientation: from-image;
 				height: 100%;
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;

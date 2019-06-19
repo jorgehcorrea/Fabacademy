@@ -211,6 +211,101 @@ void loop()
 							
 							<p>In the end, I know I'll fully grasp the resistors by memory, but before that is nice to have I think less to look up or debug. </p>
 							</div>
+							
+							<p>I later on go to expand this principle of capacitance, and measure a couple of more things.</p>
+							<p>Initially to make sure it works, I end up to the point of connecting a flattend lasanga aluminum platter, with a 10k resistor directly to some of my Mutant Fisn PCB, done Electronic Design, and actually start getting a digital signal as so:</p>
+								<div class="col-12">
+								<video width="100%" height="100%" controls>
+								  <source src="images/w11-input/measure_input.mp4" type="video/mp4">
+								  <source src="images/w11-input/measure_input.ogg" type="video/ogg">
+								 
+								Your browser does not support the video tag.
+							</video>
+							</div>
+							<p>After this, I do keep on measuring.. as a result of a certain upcomming final project to be finalized.</p>
+							<p>In this case I use a capacitive.sensing library that is fairly common and been loyal to me, and in it I tweek a couple of parameters i detail later on in the Project Development week. I did want to share :</p>
+							<p>One of the closer measurement in the capacitive sensing that lead to the chair having proper sensibilites. The following shows the capcity with 1 hand, 2 hands, sat down and proximity, when somebody walks arround the chair creating that noise. </p>
+							<div class="col-8 col-12-medium">
+									<span class="image main"><img src="images/w11-input/capacitive sensor.png" alt="" /></span>
+							</div>
+							<p>The actual wire/ resistor connection that follow up unto the bluetoth module pcb, actually also pick up capacitance, letting the sensibility have 2 points of interaction and being much more acurate in its measures. </p>
+						
+				
+						<div class="col-12">
+						<span>
+						<img src="https://playground.arduino.cc/uploads/Main/CapSense/index.gif">
+						</span>
+						</div>
+				<div class="row">
+				<div class="col-6">
+						<span class="image main">		<img src="images/w11-input/setup (2).JPG" alt="."/>
+						</span>
+				</div>
+					<div class="col-6">
+						<span class="image main">	
+						<img src="images/w11-input/set2.JPG" alt=".">
+						</span>
+				</div>	
+				</div>
+				
+				
+				
+		
+						<p>In this case I also used the arduino library we talked about earlier, but directly from the examples. </p>
+						<p>Also using a 1k resistance, that is why we see nex to: long total1 = cs_4_2.capcaitiveSensonr(<strong>500</strong>).</p>
+						<p>I belive the original recomendation the examples gives is a value of 30. In the end a 10 k resitance and thta made all the difference. </p>
+						
+						<pre><code>
+						#include <CapacitiveSensor.h>
+#include <SoftwareSerial.h>
+SoftwareSerial ftdi(2, 3); // RX-1(PA3) | TX-1 (PA4)
+/*
+ * CapitiveSense Library Demo Sketch
+ * Paul Badger 2008
+ * Uses a high value resistor e.g. 10M between send pin and receive pin
+ * Resistor effects sensitivity, experiment with values, 50K - 50M. Larger resistor values yield larger sensor values.
+ * Receive pin is the sensor pin - try different amounts of foil/metal on this pin
+ */
+
+//2= capacitive connection
+CapacitiveSensor   cs_4_2 = CapacitiveSensor(9,10);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
+//CapacitiveSensor   cs_4_6 = CapacitiveSensor(4,6);        // 10M resistor between pins 4 & 6, pin 6 is sensor pin, add a wire and or foil
+//CapacitiveSensor   cs_4_8 = CapacitiveSensor(4,8);        // 10M resistor between pins 4 & 8, pin 8 is sensor pin, add a wire and or foil
+
+void setup()                    
+{
+   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
+   ftdi.begin(9600);
+}
+
+void loop()                    
+{
+   // long start = millis();
+    long total1 =  cs_4_2.capacitiveSensor(500);
+  //  long total2 =  cs_4_6.capacitiveSensor(30);
+    //long total3 =  cs_4_8.capacitiveSensor(30);
+
+  //  ftdi.print(millis() - start);        // check on performance in milliseconds
+    //ftdi.print("\t");                    // tab character for debug windown spacing
+    /*if(total1 > 200){
+        ftdi.println('1');
+      } 
+     else{ftdi.println('0');
+     }*/
+
+    ftdi.println(total1);                  // print sensor output 1
+    //ftdi.print("\t");
+    //ftdi.print(total2);                  // print sensor output 2
+    //ftdi.print("\t");
+    //ftdi.println(total3);                // print sensor output 3
+
+    delay(100);                             // arbitrary delay to limit data to ftdi port 
+}
+						
+						</code></pre>
+							<h3>How the datasheet helped you</h3>
+							<p>in this case I actually was short of a couple of pins for the integration of this "mutant fish pcb" into the actual system of the chair. because the bluetooth connected to the ftdi side of the pcb, took up all the rx and tx pins I was forced to establish serial ports and replace the mosi and miso pins into being used as input pins. </p>
+							<p>In order to do this I used the datasheet in order to pinpoint what the miso and mosi pins (PA3)(PA4)  and define them into becoming new tx and rx pins in order to recive and send data. </p>
 						
 						<hr class="major" />
 								<h3>To Conclude</h3>
