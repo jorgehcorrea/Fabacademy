@@ -819,7 +819,7 @@ digitalWrite(relay, LOW);
 
                             <pre>
 								<code>
-#include <CapacitiveSensor.h>
+#include 'CapacitiveSensor.h'
 
 CapacitiveSensor   cs_4_2 = CapacitiveSensor(13,11);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
 const int numReadings = 10;
@@ -843,7 +843,7 @@ void loop()
 	//long start = millis();
 	long total1 =  cs_4_2.capacitiveSensor(30);
 
-//smothing code, by David A. Mellis  <dam@mellis.org>
+//smothing code, by David A. Mellis  'dam@mellis.org'
   total = total - readings[readIndex];
   // read from the sensor:
   readings[readIndex] = total1;

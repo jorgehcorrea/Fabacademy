@@ -40,19 +40,17 @@
 											<div class="col-12">
 													
 														<ul>
-															<li><strong>individual assignment`	&#9744;</strong></li> <!--&#9745; when done -->
+															<li><strong>individual assignment	&#9744;</strong></li> <!--&#9745; when done -->
 															
 																<ul>
 																	<li>design, build, and connect wired or wireless node(s) with network or bus addresses &#9744;</li>
-																	
-																	<li></li>
+																
 																</ul>
-															<li><strong>group assignment`	&#9744;</strong></li> <!--&#9745; when done -->
+															<li><strong>group assignment	&#9744;</strong></li> <!--&#9745; when done -->
 															
 																<ul>
 																	<li>send a message between two projects &#9744;</li>
-																	
-																	<li></li>
+																
 																</ul>
 																	
 															
@@ -63,42 +61,451 @@
 														
 											</div>
 						<hr class="major" />
-									<h3></h3>
-							<div class="row">
-						
-								<div class="col-12 col-12-medium">
-								<ul>
-									<li>individual assignment`- design, build, and connect wired or wireless node(s) with network or bus addresses</li>
-									
-									<li>In this case I worked on a pcb, where an rn4871 bluetooth module was connected with a attiny 45.</li>
-									<li>I had to do a couple of itterations while troubleshooting. Aparently I had ignored the vat connection with the BT module. I had to Improvise, as creating the pcb all over from scratch was not an emediate option. </li>
-									<li>I paced to bridges between the outside of the pcb and the current outpuf of the 3.3v transformer. </li>
-									<li>I Initially followed the tutorial I found by <a href="http://www.martyncurrey.com/arduino-with-rn48701/">Marthy n currey</a>. It was one of the more complete tutorials to go though. </li>
-									<li>I downloaded a Bt scanner to my phone, while the pcb was working, and ment to find it and prove its functional. Unfortunately, In the office I found al least 8 different Bluetooth devices, and not a single had names, or was my pcb. After multiple attempst with: blt scanner and eBacon I decided to look at another option. </li>
-									<li>I found the <a herf="http://ww1.microchip.com/downloads/en/DeviceDoc/50002466B.pdf#M6.9.25598.Chapter.Chapter.2.Command.Description">users guide of the RN4871 chip</a>, but first I need to look at how I actually need to do in order to get the chip working. I found the user manual had tons of comands of the presumably language, but noting on how to get the info into the chip. </li>
-									<li>Looking over stundes of previous years, specifically from <a href="http://fab.academany.org/2018/labs/barcelona/students/joris-navarro/classes/14--networking-and-communications/">Barcelona</a> He points out of important tearms I should get aquinted with. </li>
-									<li>So Barcelona sends me to a <a href="https://devzone.nordicsemi.com/tutorials/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial">beguiners tutorial for bluetooth</a></li>
-									<li>The Generic Attribute Profile or GATT, I interpret is as a metho of packaging the instructions in order to use the product inside. And aparently will be heavy reading!</li>
-									<li>Service lookes like mini programs. And predefined services are already created to facilitate certain processes for developers. It would look like understanding and using this should be a must at this point. </li>
-									<li>Characteristics: is the area where the actual data exists. Other security and metadata about the informations aparently is also existant in this place.  </li>
-									<ul>'An analogy might be a storage room filled with filing cabinets and each filing cabinet has a number of drawers. The GATT profile in this analogy is the storage room. The cabinets are the services, and the drawers are characteristics holding various information. Some of the drawers might also have locks on them restricting the access to its information.' - Martin BL </ul>
-									<li>UUID : "t is a unique number used to identify services, characteristics and descriptors, also known as attributes. .. e.g. a peripheral can inform a central what services it provides "</li>
-									<li>The  short UUID 16-bit, 0x180D  vs the long 128-bit UUID that transmits so much more custom and detailed stuff. ps. its generated randomly and chances to have to exact long UUID is ~3e-39</li>
-									<li>Later looked into the actual pcb I had made, comparing it to the example Neil has and realized that My pcb did not account for FTDI Port. Hence all commands require to go directly to the ATtiny 45 and later pushed into the RN4871 module by a push of the button. As a result I landed on <a href="https://learn.sparkfun.com/tutorials/serial-communication/all">Serial communication description</a></li>
-									<li>I figure: "go through the user guide and find what the Attiny 45 needs in order to send a signal to another bluetooth, and hope it is not too long."</li>
-										<ul>
-											<li>Controller: </li>
-										</ul>
-									</li>
-								</ul>
-								</div>
-							</div>
-						
+									<h3>Individual Assignment: The rn4871</h3>
+									<p>Testing the rn4871 bluetooth I had little succes, however I did stumble upon some jucy sources to actully get it to work</p>
+									<p>My advide to future self is: try the hc-05 first and once you know how things should work try the rn4871. </p>
+									<p>Advantages of this module are the low power option, and the 4.0 connectivity that is compatible with among other things iphones and other newer devices, even hide itself to the untrained bluetooth.</p>
+							<table>
+							<tr>
+							<th> <a href="http://www.martyncurrey.com/arduino-with-rn48701/">Arduino with RN4870/71 - Marthy n currey</a></th>
+							</tr>
+							<tr>
+							<th><a herf="https://www.microchip.com/wwwproducts/en/RN4871">users guide of the RN4871 chip</a></th>
+							</tr>
+							<tr>
+							<th><a href="http://fab.academany.org/2018/labs/barcelona/students/joris-navarro/classes/14--networking-and-communications/">Joris Navarro's Networking </a></th>
+							</tr>
+							<tr>
+							<th> <a href="https://devzone.nordicsemi.com/tutorials/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial">beguiners tutorial for bluetooth- Low energy service</a></th>
+							</tr>
+							<tr>
+							<th><a href="https://learn.sparkfun.com/tutorials/serial-communication/all">Serial communication description</a></th>
+							</tr>
+							<tr><th><a href="https://cdn.instructables.com/ORIG/FZW/QIT9/J3YQGSPC/FZWQIT9J3YQGSPC.pdf">RN4871 Commands, An guide found in Instructables. </a></th></tr>
+							<tr><th><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/50002489C.pdf">RN4871 Datasheet</a></th></tr>
+							</table>
+						<p>The process: In this case, before actually ever using bluetooh, I was confident, enough to create two pcb fully certain they would work with the BT.</p>
+						<p>I include the input/output pcb's just because the direct debbuging that ocurred was with the bluetooth. I also wish to leave all the links to buld upon failures.</p>
+                    <p><strong>Input PCB: (week 11)</strong></p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="image main"><img src="images/w11-input/input pcb.png" alt="" /></span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image main"><img src="images/w11-input/input schematics.png" alt="" /></span>
+                        </div>
+                    </div>
+                    <p>BOM:</p>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>Quantity</th>
+                                <th>Component</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Attiny 44</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>RN4871 Bluetooth module</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Button 6mm</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>LED Light SMD</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Capacitior 1 uf</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>2x3 pin ISP connector, male</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>2x2 pin connector, male</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>330 ohm Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>0 ohm Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>3.3 v IC</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>4.7 k Resistance</th>
+                            </tr>
+                        </table>
+                    </div>
+                    [input pcb / bluetooth]-schematics & paths [bom] [output pcb / bluetooth]-schematics & paths [bom]
+                    <p><strong>Debugging</strong></p>
+
+                    <p>In this case, I figured out later on that the bluetooth vcc was not connected and I required to jump a cable. </p>
+					
+					<ul class="actions">
+										<li><a href="images/w14-networking/input_files.rar" class="button" download>Get the eagle & cutting files: Input PCB</a></li>
+					</ul>
+
+                    <p><strong>Output PCB: (Week 12)</strong></p>
+                    <p>In this case, the main reason to produce this pcb was again to prove that the relay would turn on and off the coffee maker. Ideally It would have also carried out until the final proejct. Unfortunately It was not possible.</p>
+                    <p><strong>Debugging:</strong></p>
+                    <p>the bluetooth's vat was not connected, by this point I had already gotten good to create unplanned brdiges, so I used an un-used edge to do so. </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="image main"><img src="images/w12-output/output_w_bt_schem.png" alt="" /></span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image main"><img src="images/w12-output/output_w_bt_footprint.png" alt="" /></span>
+                        </div>
+                    </div>
+                    <p>BOM:</p>
+
+                    <div class="col-12">
+                        <table>
+                            <tr>
+                                <th>Quantity</th>
+                                <th>Component</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Attiny 44</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>RN4871 Bluetooth module</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>LED Light SMD</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Capacitior 1 uf</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>2x3 pin ISP connector, male</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>2x2 pin connector, male</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>330 ohm Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>10k ohm Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>0 ohm Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>3.3 v IC</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>4.7 k Resistance</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Relay 5v - 120v "SRD-05VDC-SL-C"</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Mosfit "NMOSFETTO252" </th>
+                            </tr>
+                        </table>
+                    </div>
+					<ul class="actions">
+										<li><a href="images/w14-networking/output_files.rar" class="button" download>Get the eagle & cutting files: Output PCB</a></li>
+					</ul>
+					
+					<p>After all this debugging, I was beguining to question: What might have done wrong? So I went back to basics. I decided to create the original, simplest form of rn4871 pcb. To udnerstand what was going wrong from there. </p>
+					<h3>Creating neil's bluetooth pcb</h3>
+					<p>The <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.png">path</a> and <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.jpg">components</a>  can all be found under the <a href="http://academy.cba.mit.edu/classes/networking_communications/index.html"> Networking Week </a> as </p>
+					<h3>BOM:</h3>
+					<table>
+					<tr>
+					<th>Quantity</th><th>Description</th>
+					</tr>
+					<tr>
+					<th>1</th><th>RN4871 Bluetooth module</th>
+					</tr>
+					<tr>
+					<th>1</th><th>10 k Ohm Reistance</th>
+					</tr>
+					<tr>
+					<th>1</th><th>1 uf capacitor</th>
+					</tr>
+					<tr>
+					<th>1</th><th>IC 3.3 v regulator</th>
+					</tr>
+					<tr>
+					<th>1</th><th>FTDI 1 x 6 pins, male</th>
+					</tr>
+					</table>
+					
+					<div class="row">
+					<div class="col-6">
+                        <span class="image main"><img src="images/w14-networking/1 (1).JPG" 	alt="Soldering pcb" /></span>
+                        </div>
+						<div class="col-6">
+                            <span class="image main"><img src="images/w14-networking/1 (2).JPG" alt="Soldering pcb" /></span>
+                        </div>
+
+					</div>
+					
+
+                    <p>I later found out that the input current from the 3.3 vIC electornic component might have been wrong. After close inspection it outputed closer to 4.7 v. </p>
+                    <p>The last debugging hypothesis regarding the issue with the rn4871 bluetooth is the change in voltage might have damaged the module, but it not lightly as 5v is a standard voltage that a bluetooth would be equiped against.</p>
+
+
+                    <p>Aparently one of the biggest points to take into consideration is that the module wont return a response on most commands, only ones specifically instructed to do so. </p>
+                    <p>In order to actually program this bluetooth, it was the following steps:</p>
+                    <table>
+                        <tr>
+                            <th>$$$+</th>
+                            <th>Enter command mode</th>
+                        </tr>
+                        <tr>
+                            <th>PZ</th>
+                            <th>Clear all services</th>
+                        </tr>
+                        <tr>
+                            <th>R,1</th>
+                            <th>Reset module, take effect all the changes</th>
+                        </tr>
+                    </table>
+                    <p>In order for it all to take effect, you are required to reset the bluetooth everytime. </p>
+                    <p>I ended creating another pcb, this time the pcb offered for the class in the Networking week. </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="image main"><img src="images/w14-networking/1 (1).JPG" alt="image of the pcb bluetooth rn4871"/> </span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image main"><img srC="images/w14-networking/1 (2).JPG" alt="image of the pcb bluetooth rn4871"/> </span>
+                        </div>
+                    </div>
+					<p>But I didn't ever manage to get a response. I'm still not sure what went wrong, I just never got it to work</p>
 						<hr class="major" />
+							<h3>HC-05: The setup</h3>
+                    <p>First make sure you have the hc-05 and not the hc-06, as the 06 is not able to become a master and so it required a 05 first. Physically diferenciated with a button on the buttom.</p>
+					<div class="row">
+						<div class="col-6">
+							<span class="image main" ><img src="https://ram-e-shop.com/wp-content/uploads/2018/09/kit_bluetooth_hc06.jpg" alt="."/> </span>
+							<h6>HC-06 = Slave</h6>
+						</div>
+						<div class="col-6">
+							<span class="image main"><img src="https://wiki.eprolabs.com/images/3/35/FC-114.jpg" alt="."/> </span>
+							<h6>HC-05= Master & Slave</h6>
+						</div>
+					</div>
+					<p>The Datasheet for the HC-06 is <a href="http://www.electronicaestudio.com/docs/istd016A.pdf">HERE</a></p>
+					<p>The button in this PCB attached to the board is conviniently the 'RESETB' pin: that would otherwise requre a low. input in order to reset the module.   </p>
+                    <p>This button require >5ms to cause a reset.</p>
+                    <p>Once you have done so, Open the serial port, in this case arudino's port to communicate in the right 'com' port. </p>
+                    <table>
+                        <tr>
+                            <th>38400</th>
+                            <th>Baud Rate </th>
+                        </tr>
+                        <tr>
+                            <th>Carriage Return</th>
+                            <th>Set</th>
+                        </tr>
+                        <tr>
+                            <th>AT</th>
+                            <th>Response= OK // Cheak if you are connected</th>
+                        </tr>
+                        <tr>
+                            <th>AT+RESET</th>
+                            <th>Response= ok // In order for anything to take place</th>
+                        </tr>
+                        <tr>
+                            <th>AT+UART=9600, 0,0 </th>
+                            <th>Change the band rate into a certain number </th>
+                        </tr>
+                        <tr>
+                            <th>AT+UART=9600, 0,0 </th>
+                            <th>Change the band rate into a certain number </th>
+                        </tr>
+                        <tr>
+                            <th>AT+NAME=S-C BT M </th>
+                            <th>//sets the bt name (Master or slave ) </th>
+                        </tr>
+                        <tr>
+                            <th>AT+ROLE=0 /* OR */ AT+ROLE=1</th>
+                            <th>//Slave or Master</th>
+                        </tr>
+                        <tr>
+                            <th>AT+CMODE=1</th>
+                            <th>//"enables the search for available devices"-Danny Vallejo</th>
+                        </tr>
+                        <tr>
+                            <th>AT+PSWD=1122</th>
+                            <th>//Sets password</th>
+                        </tr>
+                        <tr>
+                            <th>AT+RESET</th>
+                            <th> // Resets the module and makes the changes active</th>
+                        </tr>
+                    </table>
+                    <p>The setup, FTDI & HC-05</p>
+                    <div class="col-12">
+                        <video width="100%" controls>
+                            <source src="images/w21/bt_connection.ogg" type="video/ogg" />
+                        </video>
+                    </div>
+					<p>At some point it is required to verify what the hc-05 actually has stored in its memory. It was less talked about but usefull in itself. It is basically a inuatinve '?' at the end of the command instead of the actual parameter.</p>
+					<table>
+					<tr>
+					<th>AT+ROLE?</th><th>What role are you {hc-05} on? 0=master 1=slave</th>
+					</tr>
+					<tr>
+					<th>AT+NAME?</th><th>What is your name {hc-05}?</th>
+					</tr>
+					<tr>
+					<th>AT+PSWD?</th><th>What is your password se to?</th>
+					</tr>
+					<tr>
+					<th>AT+UART?</th><th>Response: Baud, Stop bit, Parity. (I didnt fully undestand this but I got them the same on both BT. That seems important</th>
+					</tr>
+					<tr>
+					<th>AT+CMODE?</th><th>Same idea, have the same. 0 = connect fixed address, 1 = connect any address, 2 = slave - loop</th>
+					</tr>
+					</table>
+					<p>This is in case you are testing out one that is not new, yours or possibly just rutine cheak.</p>
+					<p> This section is not as talked about on Arduino forum tutorials but is just as important for the next step of playing arround with the HC-05 BT.</p>
+                    <p>HC-05 & HC-05</p>
+                    <p>It is required to setup one HC-05 as a Master, and one as Slave.</p>
+                    <div class="col-12">
+                        <video width="100%" controls>
+                            <source src="images/w21/bt-com-pcb-final.ogg" type="video/ogg" />
+                        </video>
+                    </div>
+
+                    <p>Once I actually got them sync, I could actually transfer data between them. </p>
+                    <p>I later opened two diferent terminals: Arduino & Terminte 3.4 (due to its ease of installation and light weight)</p>
+                    <div class="col-6">
+                        <span class="image main"><img srC="images/w21/1.PNG" alt="Conneciton between HC-05 "/> </span>
+                    </div>
+                    <h4>Communication:</h4>
+                    <table>
+                        <tr>
+                            <th>HOLA</th>
+                        </tr>
+                        <tr>
+                            <th>SIII</th>
+                        </tr>
+                    </table>
+					<p>You will also be able to find an almost identical documentation for the final project, as I actually had to work this out for that. <a href="assignment-19.html">Link to Project Development</a> with the aded code connecting the Coffee machine and the sensing rocking chair.</p>
+						
+				<hr class="major" />
+					<h3>Group Assignment: Send a message between two projects</h3>	
+					<p>At this point in time, I had most of my final proejct working. Hence It was a great time to play arround with the aquired knowladge and actually connect two final projects. </p>
+					<p>I modified slightly the code from my final project to activate <a herf="http://fabacademy.org/2019/labs/zoi/students/alejandra-granda/#about">Ale's</a> Project:<a href="http://fabacademy.org/2019/labs/zoi/students/alejandra-granda/#FinalProject">Upcycle Fab Dome</a> </p>
+					<p>My project is based on a binary output, sending either a "1" or a "0" acroding to wether or not someone is on the chair.</p>
+					<p>On the other hand, Ale's project is based on a series of letters in acordance to the light required to be emmited from the dome modluar section. As an example: "R" = Red LED's Turning on. </p>
+					<p>We both used HC-05 Bluetooth module so I basically switched my reciving bluetooth with her's in order to achive communication.</p>
+					<p>I later switched a couple of characters in order for the char and the dome be connected, as follows:</p>
+					<div class="row">
+						 <div class="col-12">
+							<span class="image main"><img srC="images/w14-networking/switch.png" alt="Conneciton between HC-05 "/> </span>
+						</div>
+					</div>
+				
+					<pre><code>
+#include "CapacitiveSensor.h"
+/*
+ * Paul Badger 2008
+ */
+CapacitiveSensor   cs_4_2 = CapacitiveSensor(13,11);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
+
+const int numReadings = 10;
+
+int readings[numReadings];      // the readings from the analog input
+int readIndex = 0;              // the index of the current reading
+int total = 0;                  // the running total
+int average = 0;                // the average
+
+void setup()                    
+{
+   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
+   Serial.begin(9600);
+   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
+    readings[thisReading] = 0;
+  }
+}
+
+void loop()                    
+{
+    //long start = millis();
+    long total1 =  cs_4_2.capacitiveSensor(30);
+
+//smothing code
+  total = total - readings[readIndex];
+  // read from the sensor:
+  readings[readIndex] = total1;
+  // add the reading to the total:
+  total = total + readings[readIndex];   //readIndex variable to imput
+  // advance to the next position in the array:
+  readIndex = readIndex + 1;
+
+  // if we're at the end of the array...
+  if (readIndex >= numReadings) {
+    // ...wrap around to the beginning:
+    readIndex = 0;
+  }
+
+  // calculate the average:
+  average = total / numReadings;
+  // send it to the computer as ASCII digits
+
+  if (average > 50) 
+  {
+    Serial.print('R'); // ln solo para humanos
+    
+  } 
+  else
+  {
+    Serial.print('O'); //
+  }
+    delay(10);                             // arbitrary delay to limit data to serial port 
+}
+					</code></pre>
+					<ul class="actions">
+										<li><a href="images/w14-networking/FINAL_POGRAM_BT_Network_Version.rar" class="button" download>Get the code from the Arduino Source</a></li>
+					</ul>
+					
+					
+					  <div class="col-12">
+                        <video width="100%" controls>
+                            <source src="images/w14-networking/networking_w_ale.ogg" type="video/ogg" />
+                        </video>
+                    </div>
+						
 								<h3>To Conclude</h3>
 							<div class="col-12 col-12-medium">
-									<p></p>
-								</div>	
+									<p>It was enlightning to actually work through a bluetooht module. At the end, with the proper knowladge: straight forward. I was Impressed. Unfortunately I sitll require and plan on learning another module that can run with low energy as it has wider practicle advantages. </p>
+									<p>I am howerver well aware as this excersice and and its work has just scratched the surface of wireless communication. Bluetooth requires much simpler now-how that what wifi would, and bluetooth 2.0 is far more basic than the current 5.0 bluetooth. </p>
+									<p>Being able to prototype with an integrated bluetooth however, on whatever application might pop up is an hot for sure.</p>
+									<p>As far as the rn4871 I was expecting, and I made it clear for it to be much simpler, yet I cant put my finger on what was not simple yet. I think if I actually look at it now, I would probably figure it out. I would get new modules though.I suspect between all the saldering and fidelling they might not be fully operational, and still not sure how to cheak yet. </p>
+							</div>	
 								
 								
 								
@@ -107,47 +514,46 @@
 						</div>
 					</div>
 
-					<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="final-projects.html">Final Project</a></li>
-										<li>
-											<span class="opener">Assignments</span>
-											<ul>
-												<li><a href="assignment-1.html">Principles and practices</a></li>
-												<li><a href="assignment-2.html">Project management</a></li>
-												<li><a href="assignment-3.html">Computer-aided design</a></li>
-												<li><a href="assignment-4.html">Computer-controlled cutting</a></li>
-												<li><a href="assignment-5.html">Electronics production</a></li> 
-												<li><a href="assignment-6.html">3D scanning and Priting</a></li> 
-												<li><a href="assignment-7.html">Electronic Design</a></li> 
-												<li><a href="assignment-8.html">Computer-Controlled Machining</a></li> 
-												<li><a href="assignment-9.html">Embeded Programming</a></li> 
-												<li><a href="assignment-10.html">Casting and Molding</a></li>
-												<li><a href="assignment-11.html">Input Device</a></li>
-												<li><a href="assignment-12.html">Output Device</a></li>
-												<li><a href="assignment-13.html">Applications and Implications</a></li>
-												<li><a href="assignment-14.html">Networking and Communications</a></li>
-												<li><a href="assignment-15.html">Machine Design</a></li>
-												<li><a href="assignment-16.html">Interface and Application Programming</a></li>
-												<li><a href="assignment-17.html">machine design</a></li>
-												<li><a href="assignment-18.html">wildcard week</a></li>
-												<li><a href="assignment-19.html">invention, intellectual property, and income</a></li>
-												<li><a href="final-projects.html"> Final Project Requirements</a></li>	
-												
-											</ul>
-										</li>
-									</ul>
-								</nav>
-						</div>
-					</div>
+					 <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="final-projects.html">Final Project</a></li>
+                        <li>
+                            <span class="opener">Assignments</span>
+                            <ul>
+                                <li><a href="assignment-1.html">Principles and practices</a></li>
+                                <li><a href="assignment-2.html">Project management</a></li>
+                                <li><a href="assignment-3.html">Computer-aided design</a></li>
+                                <li><a href="assignment-4.html">Computer-controlled cutting</a></li>
+                                <li><a href="assignment-5.html">Electronics production</a></li>
+                                <li><a href="assignment-6.html">3D scanning and Priting</a></li>
+                                <li><a href="assignment-7.html">Electronic Design</a></li>
+                                <li><a href="assignment-8.html">Computer-Controlled Machining</a></li>
+                                <li><a href="assignment-9.html">Embedded Programming</a></li>
+                                <li><a href="assignment-10.html">Moulding and Casting</a></li>
+                                <li><a href="assignment-11.html">Input Device</a></li>
+                                <li><a href="assignment-12.html">Output Device</a></li>
+                                <li><a href="assignment-13.html">Applications and Implications</a></li>
+                                <li><a href="assignment-14.html">Embedded Networking and Communication</a></li>
+                                <li><a href="assignment-15.html">Mechanical Design, Machine Design</a></li>
+                                <li><a href="assignment-16.html">Interface application Programming</a></li>
+                                <li><a href="assignment-17.html">Wildcard Week</a></li>
+                                <li><a href="assignment-18.html">Invention, Intellectual Property and business models</a></li>
+                                <li><a href="assignment-19.html">Project development</a></li>
+                                <li><a href="final-projects.html"> Final Project Requirements</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
 			</div>
 
