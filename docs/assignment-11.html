@@ -216,8 +216,8 @@ void loop()
 							<p>Initially to make sure it works, I end up to the point of connecting a flattend lasanga aluminum platter, with a 10k resistor directly to some of my Mutant Fisn PCB, done Electronic Design, and actually start getting a digital signal as so:</p>
 								<div class="col-12">
 								<video width="100%" height="100%" controls>
-								  <source src="images/w11-input/measure_input.mp4" type="video/mp4">
-								  <source src="images/w11-input/measure_input.ogg" type="video/ogg">
+								  <source src="images/w11-input/touch-2.mp4" type="video/mp4">
+								  <source src="images/w11-input/touch-2.ogg" type="video/ogg">
 								 
 								Your browser does not support the video tag.
 							</video>
@@ -247,8 +247,79 @@ void loop()
 						</span>
 				</div>	
 				</div>
-				
-				
+				<h3>The input pcb</h3>
+				<p>In this case I was planning to use this pcb to send data into the other end, throught the bluetooth module</p>
+				<P>Not certain what Input I was actually going to use I initially thought to use a button. Latter discredited because I was actually interrupting the isp input. I added the VCC / GND as seperate pins in order to later actually use the isp pins as something else. </P>
+				<p>Reading up on the new bluetooth component</p>
+				<div class="row">
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/a (1).jpg">
+					</span>
+				</div>
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/a (2).jpg">
+					</span>
+				</div>
+				</div>
+				<p>drawing the schematic, and later found out the auto-path tool. Fun to play arroudn with, and when it works but its only good for small simple boards.</p>
+				<div class="row">
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/input schematics.png">
+					</span>
+				</div>
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/Screenshot (115).jpg">
+					</span>
+				</div>
+				</div>
+				<p>I finalized my design as so:</p>
+				<div class="row">
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/Screenshot (117).jpg">
+					</span>
+				</div>
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/Screenshot (118).jpg">
+					</span>
+				</div>
+				</div>
+				<ul class="actions fit">
+									<li><a href="images/w11-input/input-files.rar" class="button primary fit" download>The input pcb files </a></li>
+								</ul>
+				<p>I had a terrible missalignment, when exporting the png, as the selected area was much larger and I attemped to manually cohencide the boards later. It didnt work. I manages to test ti before in the <a href="https://ncviewer.com/">NC-Viewer online</a> fortunatly. You just drop your code in.</p>
+				<p>I was combining my cutting code and paths to see if they cohencide. On the right I later figured out you move the artboard limits manually, so I did that.</p>
+				<div class="row">
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/Screenshot (119).png">
+					</span>
+				</div>
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/Screenshot (120).png">
+					</span>
+				</div>
+				</div>
+				<p>So I created this: </p>
+				<div class="row">
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/board (2).JPG">
+					</span>
+				</div>
+				<div class="col-6">
+					<span class="image main">
+						<img src="images/w11-input/board (3).JPG">
+					</span>
+				</div>
+				</div>
+				<p>This is what happens when you wait for after the debugging. A filthy board happens. </p>
 				
 		
 						<p>In this case I also used the arduino library we talked about earlier, but directly from the examples. </p>
@@ -256,9 +327,9 @@ void loop()
 						<p>I belive the original recomendation the examples gives is a value of 30. In the end a 10 k resitance and thta made all the difference. </p>
 						
 						<pre><code>
-						#include <CapacitiveSensor.h>
+#include <CapacitiveSensor.h>
 #include <SoftwareSerial.h>
-SoftwareSerial ftdi(2, 3); // RX-1(PA3) | TX-1 (PA4)
+SoftwareSerial ftdi(1, 6); // RX-1(pb0) | TX-1 (pb1)
 /*
  * CapitiveSense Library Demo Sketch
  * Paul Badger 2008
