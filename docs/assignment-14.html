@@ -302,6 +302,8 @@
                     <p>In order for it all to take effect, you are required to reset the bluetooth everytime. </p>
                    
 					<p>But I didn't ever manage to get a response. I'm still not sure what went wrong, I just never got it to work</p>
+					<p>Here is some of neils code for the attiny 45 ><a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.py">Find it here, its all in py</a></p>
+
 						<hr class="major" />
 							<h3>HC-05: The setup</h3>
                     <p>First make sure you have the hc-05 and not the hc-06, as the 06 is not able to become a master and so it required a 05 first. Physically diferenciated with a button on the buttom.</p>
@@ -319,6 +321,7 @@
 					<p>The button in this PCB attached to the board is conviniently the 'RESETB' pin: that would otherwise requre a low. input in order to reset the module.   </p>
                     <p>This button require >5ms to cause a reset.</p>
                     <p>Once you have done so, Open the serial port, in this case arudino's port to communicate in the right 'com' port. </p>
+                    <p>This is the code that worked and connected the bluetooth together. </p>
                     <table>
                         <tr>
                             <th>38400</th>
