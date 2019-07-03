@@ -158,8 +158,6 @@
 
                     <p><strong>Output PCB: (Week 12)</strong></p>
                     <p>In this case, the main reason to produce this pcb was again to prove that the relay would turn on and off the coffee maker. Ideally It would have also carried out until the final proejct. Unfortunately It was not possible.</p>
-                    <p><strong>Debugging:</strong></p>
-                    <p>the bluetooth's vat was not connected, by this point I had already gotten good to create unplanned brdiges, so I used an un-used edge to do so. </p>
                     <div class="row">
                         <div class="col-6">
                             <span class="image main"><img src="images/w12-output/output_w_bt_schem.png" alt="" /></span>
@@ -233,8 +231,11 @@
 					<ul class="actions">
 										<li><a href="images/w14-networking/output_files.rar" class="button" download>Get the eagle & cutting files: Output PCB</a></li>
 					</ul>
+				<p><strong>Debugging:</strong></p>
+                    <p>the bluetooth's vat was not connected, by this point I had already gotten good to create unplanned brdiges, so I used an un-used edge to do so. </p>
+
 					
-					<p>After all this debugging, I was beguining to question: What might have done wrong? So I went back to basics. I decided to create the original, simplest form of rn4871 pcb. To udnerstand what was going wrong from there. </p>
+					<p>After all this debugging, I went back to basics. I created the original, simplest form of rn4871 pcb. To udnerstand what was going wrong from there. </p>
 					<h3>Creating neil's bluetooth pcb</h3>
 					<p>The <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.png">path</a> and <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.jpg">components</a>  can all be found under the <a href="http://academy.cba.mit.edu/classes/networking_communications/index.html"> Networking Week </a> as </p>
 					<h3>BOM:</h3>
@@ -301,10 +302,10 @@
                     <p>In order for it all to take effect, you are required to reset the bluetooth everytime. </p>
                    
 					<p>But I didn't ever manage to get a response. I'm still not sure what went wrong, I just never got it to work</p>
-					<p>Here is some of neils code for the attiny 45 ><a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.py">Find it here, its all in py</a></p>
+					<p>Here is some of neils code for the attiny 45 <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.py">Find it here, its all in py</a></p>
 
 						<hr class="major" />
-							<h3>HC-05: The setup</h3>
+							<h3>Back to Basics: Setting up the HC-05</h3>
                     <p>First make sure you have the hc-05 and not the hc-06, as the 06 is not able to become a master and so it required a 05 first. Physically diferenciated with a button on the buttom.</p>
 					<div class="row">
 						<div class="col-6">
@@ -317,7 +318,8 @@
 						</div>
 					</div>
 					<p>The Datasheet for the HC-06 is <a href="http://www.electronicaestudio.com/docs/istd016A.pdf">HERE</a></p>
-					<p>The button in this PCB attached to the board is conviniently the 'RESETB' pin: that would otherwise requre a low. input in order to reset the module.   </p>
+			<h3>The Configuration of the HC-05</h3>
+					<p>The button located in this PCB attached to the board is the 'RESETB' pin: that would otherwise requre a low. input in order to reset the module.   </p>
                     <p>This button require >5ms to cause a reset.</p>
                     <p>Once you have done so, Open the serial port, in this case arudino's port to communicate in the right 'com' port. </p>
                     <p>This is the code that worked and connected the bluetooth together. </p>
