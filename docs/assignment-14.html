@@ -237,7 +237,7 @@
 					
 					<p>After all this debugging, I went back to basics. I created the original, simplest form of rn4871 pcb. To udnerstand what was going wrong from there. </p>
 					<h3>Creating neil's bluetooth pcb</h3>
-					<p>The <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.png">path</a> and <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.jpg">components</a>  can all be found under the <a href="http://academy.cba.mit.edu/classes/networking_communications/index.html"> Networking Week </a> as </p>
+				
 					<h3>BOM:</h3>
 					<table>
 					<tr>
@@ -279,12 +279,12 @@
 					</div>
 					
 
-                    <p>I later found out that the input current from the 3.3 vIC electornic component might have been wrong. After close inspection it outputed closer to 4.7 v. </p>
-                    <p>The last debugging hypothesis regarding the issue with the rn4871 bluetooth is the change in voltage might have damaged the module, but it not lightly as 5v is a standard voltage that a bluetooth would be equiped against.</p>
+                    <p>Debugging, I found the input current from the vIC electornic component outputed 4.7 v. A smiple confussion on my part probably.  </p>
+                    <p>My hypothesis is the rn4871 bluetooth might have damaged with higher voltage.</p>
 
 
-                    <p>Aparently one of the biggest points to take into consideration is that the module wont return a response on most commands, only ones specifically instructed to do so. </p>
-                    <p>In order to actually program this bluetooth, it was the following steps:</p>
+                    <p>A big take-away is that the module wont return a response on most commands, only ones specifically instructed to do so. </p>
+                    <p>In order to actually program this bluetooth, it was the following initiation steps:</p>
                     <table>
                         <tr>
                             <th>$$$+</th>
@@ -299,10 +299,8 @@
                             <th>Reset module, take effect all the changes</th>
                         </tr>
                     </table>
-                    <p>In order for it all to take effect, you are required to reset the bluetooth everytime. </p>
-                   
-					<p>But I didn't ever manage to get a response. I'm still not sure what went wrong, I just never got it to work</p>
-					<p>Here is some of neils code for the attiny 45 <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.py">Find it here, its all in py</a></p>
+                    <p>I never got passed them but Is what I used to test if I got it working. </p>
+                	<p>Here is some of neils code for the attiny 45 <a href="http://academy.cba.mit.edu/classes/networking_communications/RN4871/hello.RN4871.ftdi.py">Find it here, its all in py</a></p>
 
 						<hr class="major" />
 							<h3>Back to Basics: Setting up the HC-05</h3>
