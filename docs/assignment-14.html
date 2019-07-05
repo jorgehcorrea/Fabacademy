@@ -368,6 +368,50 @@
                         </tr>
                     </table>
                     <p>The setup, FTDI & HC-05</p>
+                    <p>The diagram:</p>
+                    
+                    <div class="col-12 col-md-6">
+                        <span class="image main"><img srC="images/ w14-networking/diagram1.jpg" alt="Conneciton between HC-05 "/> </span>
+                    </div>
+                    <pr>
+                        <code>
+    #include <SoftwareSerial.h>
+    SoftwareSerial ftdi(10, 11); // RX | TX
+    char data = 0;
+    char relay =  13;//const int
+    void setup()
+    {
+     pinMode(relay, OUTPUT);
+   //   Serial.begin(9600);
+      ftdi.begin(9600);  //Default Baud for comm, it may be different for your Module. 
+    //  Serial.println("The bluetooth gates are open.\n Connect to HC-05 from any other bluetooth device with 1234 as pairing key!.");
+     
+    }
+     
+    void loop()
+    {
+     
+      // Feed any data from bluetooth to Terminal.
+    //  if (ftdi.available())
+      //  Serial.write(ftdi.read());
+     
+      // Feed all data from termial to bluetooth
+    //  if (Serial.available())
+      //  ftdi.write(Serial.read());
+    if(ftdi.available()>0)
+    {
+      data = ftdi.read();
+      ftdi.print(data);
+
+        if (data == '1')
+         digitalWrite(13, HIGH);
+        else if (data == '0')
+         digitalWrite(13, LOW);
+      }
+    
+    }      
+                        </code>
+                    </pr>
                     <div class="col-12">
                         <video width="100%" controls>
                             <source src="images/w21/bt_connection.ogg" type="video/ogg" />
