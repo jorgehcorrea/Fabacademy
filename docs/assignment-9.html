@@ -294,6 +294,34 @@
 									</span>
 								</div> -->
 							</div>
+							<p>I have added the code used for the blink. </p>
+					<pre>
+					    <code>
+					        
+					        #define F_CPU 2000000UL  //Frecuencia de cristal
+#include <avr/io.h> //libreria para entradas y salidas
+#include <util/delay.h> //call librari that you are able to create delays
+
+#define retardo 1000 // define variable
+int main (void)
+{
+	/* set (PB5) of PORT for output */
+	//DORB = (1<<PB5)
+	DDRC = (1<<PC0); //configura como salida
+	
+	while(1)
+	{
+		PORTC = 0b00000001; //se enciende el led
+		_delay_ms(retardo);
+		PORTC = 0b00000000; //se apaga el led
+		_delay_ms(retardo);
+	}
+		
+	
+}
+
+					    </code>
+					</pre>
 						<hr class="major" />
 								<h3>To Conclude</h3>
 							<div class="col-12 col-12-medium">
