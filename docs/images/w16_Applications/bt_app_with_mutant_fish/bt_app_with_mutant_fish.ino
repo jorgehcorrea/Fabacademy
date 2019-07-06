@@ -7,10 +7,7 @@ void setup()
     pinMode(A0, OUTPUT);
     digitalWrite(A0, LOW);
     Serial.begin(9600); //VELOCIDAD DE COMUNICACION  
-  /*
-
-  Serial.begin(9600); 
-  pinMode(13,OUTPUT);
+   pinMode(13,OUTPUT);
   digitalWrite(13,LOW);
   delay(5000);
   BT.println("AT");
@@ -22,7 +19,7 @@ void setup()
   BT.println("AT+RESET");
   delay(1000);
   BT.begin(8600); 
-  */
+ 
 }
 
 void loop() 
