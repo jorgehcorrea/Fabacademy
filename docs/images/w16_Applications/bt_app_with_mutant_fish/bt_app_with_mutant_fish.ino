@@ -1,12 +1,14 @@
 #include <SoftwareSerial.h>
-/*SoftwareSerial BT(PD0, PD1); // RX, TX  BLUE*/
+
+SoftwareSerial BT(PD0, PD1); // RX, TX  BLUE
 
 char dato;
 void setup() 
+
 {
     pinMode(A0, OUTPUT);
     digitalWrite(A0, LOW);
-    Serial.begin(9600); //VELOCIDAD DE COMUNICACION  
+    BT.begin(9600); //VELOCIDAD DE COMUNICACION  
    pinMode(13,OUTPUT);
   digitalWrite(13,LOW);
   delay(5000);
@@ -24,10 +26,10 @@ void setup()
 
 void loop() 
 {
-  if (Serial.available())
+  if (BT.available())
   {
-    dato=Serial.read();
-    Serial.print(dato);
+    dato=BT.read();
+    BT.print(dato);
   }
   
   if(dato=='1')
@@ -39,4 +41,4 @@ void loop()
   {
     digitalWrite(A0,LOW);
   }
-}
+} 
