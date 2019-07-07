@@ -377,7 +377,7 @@
                     <p>The actual bluetooth devices hc-05 where already paired, and set up with the earlier commands. </p>
                     <pre>
                         <code>
-    #include <SoftwareSerial.h>
+    #include 'SoftwareSerial.h'
     SoftwareSerial ftdi(10, 11); // RX | TX
     char data = 0;
     char relay =  13;//const int
@@ -458,6 +458,14 @@
 							<span class="image main"><img srC="images/w14-networking/switch.png" alt="Conneciton between HC-05 "/> </span>
 						</div>
 					</div>
+					 <div class="col-12">
+                        <video width="100%" controls>
+                            <source src="images/w21/bt-com-pcb-final.ogg" type="video/ogg" />
+                            <source src="images/w21/bt-com-pcb-final.mp4" type="video/mp4" />
+                            
+                        </video>
+                    </div>
+					bt-com-pcb-final
 				
 					<pre><code>
 #include "CapacitiveSensor.h"
