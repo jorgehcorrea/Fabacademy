@@ -346,14 +346,14 @@ input, select, textarea {
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
-		margin: 0 0 2em 0;
+		margin: 0 0 0em 0; /*0 0 0.9em 0*/
 	}
 
 		pre code {
 			display: block;
 			line-height: 1.75;
 			padding: 1em 1.5em;
-			overflow-x: auto;
+			overflow-x: ; /*auto*/
 		}
 
 	hr {
@@ -2165,7 +2165,7 @@ input, select, textarea {
 			}
 
 	a.image {
-		overflow: hidden;
+		overflow: ;/*hidden*/
 	}
 
 		a.image img {
@@ -2449,7 +2449,7 @@ input, select, textarea {
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
+		overflow-x: ; /*auto*/
 	}
 
 	table {
@@ -3213,7 +3213,7 @@ input, select, textarea {
 			left: 26em;
 			line-height: 7.5em;
 			outline: 0;
-			overflow: hidden;
+			overflow: ;/*hidden*/
 			position: absolute;
 			text-align: center;
 			text-indent: 7.5em;
@@ -3301,8 +3301,8 @@ input, select, textarea {
 					-webkit-overflow-scrolling: touch;
 					height: 100%;
 					left: 0;
-					overflow-x: hidden;
-					overflow-y: auto;
+					overflow-x: ;/*hidden*/
+					overflow-y: ;/*auto*/
 					position: absolute;
 					top: 0;
 				}
