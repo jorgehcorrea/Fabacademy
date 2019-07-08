@@ -446,7 +446,7 @@
                     <p>The same scenario: If the input pcb sent a 1 (recives a person), the output pcb turn on the Relay (Instead of the led) finishing the opeation.</p>
                     <p>The follwwing is how they connected:</p>
                     <div class="col-12 col-md-6">
-                        <span class="image main"><img srC="images/w14-networking/diagram2.JPG" alt="Conneciton between HC-05 "/> </span>
+                        <span class="image main"><img src="images/w14-networking/diagram2.JPG" alt="Conneciton between HC-05 "/> </span>
                     </div>
                     	<p>Here is a video of them connecting between each other: </p>
 					 <div class="col-12">
@@ -455,6 +455,94 @@
                             <source src="images/w21/bt-com-pcb-final.mp4" type="video/mp4" />
                             
                         </video>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-6-medium">
+                            <span class="image main"><img src="images/w14-networking/.JPG" alt="Input pcb "/> </span>
+                            <p>Input pcb's code:</p>
+                            <pre>
+                                <code>
+ #include 'SoftwareSerial.h'
+    SoftwareSerial ftdi(2, 3); // RX-1(PA3) | TX-1 (PA4)
+    char data = 0;
+    
+    const int boton = 7; //PB2 pin de boton
+   // char transmit = 3; //PA7 TX T44
+
+
+    int estadoboton = 0;  
+    
+    
+    void setup()
+    {
+        // initialize the LED pin as an output:
+ 
+       // initialize the pushbutton pin as an input:
+     pinMode(boton, INPUT);
+      //intialize connections seriales
+      
+      ftdi.begin(9600);  //Default Baud for comm, it may be different for your Module. 
+     // ftdi.print("The bluetooth gates are open.\n Connect to HC-05 from any other bluetooth device with 1234 as pairing key!.");
+     
+    }
+     
+void loop() {
+  // read the state of the pushbutton value:
+  estadoboton = digitalRead(boton);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (estadoboton == LOW) 
+  {
+   delay(100);
+    ftdi.print('1');
+    
+    //digitalWrite(ledPin, HIGH);
+   
+  } 
+}
+    //Reference: https://exploreembedded.com/wiki/Setting_up_Bluetooth_HC-05_with_Arduino
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="col-12 col-6-medium">
+                            <span class="image main"><img src="images/w14-networking/.JPG" alt="Output pcb "/> </span>
+                            <p>Output pcb's code:</p>
+                            <pre>
+                                <code>
+#include 'SoftwareSerial.h'
+    SoftwareSerial ftdi(10, 11); // RX | TX
+    char data = 0;
+    char relay =  13;//const int
+    void setup()
+    {
+     pinMode(relay, OUTPUT);
+   //   Serial.begin(9600);
+      ftdi.begin(9600);  //Default Baud for comm, it may be different for your Module. 
+    //  Serial.println("The bluetooth gates are open.\n Connect to HC-05 from any other bluetooth device with 1234 as pairing key!.");
+     
+    }
+     
+    void loop()
+    {
+     
+
+    if(ftdi.available()>0)
+    {
+      data = ftdi.read();
+      ftdi.print(data);
+
+        if (data == '1')
+         digitalWrite(13, HIGH);
+        else if (data == '0')
+         digitalWrite(13, LOW);
+      }
+    
+    }
+
+    //Reference: https://exploreembedded.com/wiki/Setting_up_Bluetooth_HC-05_with_Arduino
+                                </code>
+                            </pre>
+                        </div>
                     </div>
 				<hr class="major" />
 					<h3>Group Assignment: Send a message between two projects</h3>	
