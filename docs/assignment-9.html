@@ -299,15 +299,15 @@
 					    <code>
 					        
 					        #define F_CPU 2000000UL  //Frecuencia de cristal
-#include <avr/io.h> //libreria para entradas y salidas
-#include <util/delay.h> //call librari that you are able to create delays
+#include  &lt;avr/io.h&gt; //libreria para entradas y salidas
+#include &lt;util/delay.h&gt; //call librari that you are able to create delays
 
 #define retardo 1000 // define variable
 int main (void)
 {
 	/* set (PB5) of PORT for output */
-	//DORB = (1<<PB5)
-	DDRC = (1<<PC0); //configura como salida
+	//DORB = (1&lt;&lt;PB5)
+	DDRC = (1&lt;&lt;PC0); //configura como salida
 	
 	while(1)
 	{
